@@ -1,0 +1,24 @@
+/* #customize .slick-slide.slick-active.slick-current{
+    width: 600px;
+    transition: all 1s ease-in-out;
+    margin-right: 20px;
+}
+
+#customize .slick-slide:not(.slick-current){
+    margin-right: 20px;
+    width: 280px;
+    overflow: hidden;
+} */
+/* #customize .customize-list .slick-track{
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+}
+#customize .slick-slide.slick-active.slick-current{
+    width: 600px;
+    transition: all 1s ease-in-out;
+}
+#customize .slick-slide:not(.slick-current){
+    width: 280px;
+    overflow: hidden;
+} */

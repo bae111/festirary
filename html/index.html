@@ -1,0 +1,429 @@
+<?php include_once("./layout/header.html"); ?>
+    <main id="main">
+        <!-- 메인 배너 -->
+        <section id="main-banner">
+            <div class="title-wrap">
+                <div class="title-box">
+                    <h2>다양한 <strong>축제</strong><br>
+                    <strong>무한한</strong> 즐거움!</h2>
+                    <p>지금 바로 탐험해보세요!</p>
+                </div>
+                <div class="title-search">
+                    <form action="" id="tit-search">
+                        <input type="text" placeholder="찾고 싶은 축제를 여기에 검색해보세요.">
+                        <button class="i-search" type="submit"></button>
+                    </form>
+                </div>
+            </div>
+
+            <div id="main-banner-swiper" class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="/img/main-banner/m-slide-01.jpg" alt="서산 해미읍성축제"></div>
+                    <div class="swiper-slide"><img src="/img/main-banner/m-slide-02.jpg" alt="대구 풍등축제"></div>
+                    <div class="swiper-slide"><img src="/img/main-banner/m-slide-03.jpg" alt="부산 불꽃축제"></div>
+                </div>
+                <div class="swiper-pagination main-banner-swiper-pagination"></div>
+            </div>
+
+            
+        </section>
+
+        <!-- 맞춤형 축제 -->
+        <section id="customize" class="container p-80 g-60">
+            <div class="banner-title">
+                <h2>요즘 축제, <strong>여기 어때?</strong></h2>
+                <p>내가 선택한 관심분야에 따른 맞춤형 축제를 만나보세요!</p>
+            </div>
+            <div class="customize-list">
+                <div><a href="#"><span class="fav-btn"></span><img src="/img/customize/c-img-01.jpg" alt="2024 섬 겨울꽃 축제"></a></div>
+                <div><a href="#"><span class="fav-btn"></span><img src="/img/customize/c-img-02.jpg" alt="겨울엔 양평 축제"></a></div>
+                <div><a href="#"><span class="fav-btn"></span><img src="/img/customize/c-img-03.jpg" alt="지리산바래봉 겨울축제"></a></div>
+                <div><a href="#"><span class="fav-btn"></span><img src="/img/customize/c-img-04.jpg" alt="백운계곡 동장군 축제"></a></div>
+                <div><a href="#"><span class="fav-btn"></span><img src="/img/customize/c-img-05.jpg" alt="화천 산천어축제"></a></div>
+            </div>
+            <div class="move-btn">
+                <span class="prev-arr"></span>
+                <span class="more"></span>
+                <span class="next-arr"></span>
+            </div>
+            <div class="customize-text">
+                <dl>
+                    <dt class="festi-name"><storg>#</storg>2024 섬 겨울꽃 축제</dt>
+                    <dd class="festi-address">전남 신안군 압해읍 무지개길 330</dd>
+                    <dd class="festi-date">2024.12.06 ~ 2025.01.01</dd>
+                </dl>
+                <p class="festi-detail">압해도에 있는 천사섬분재정원이며 이곳에 있는 애기동백숲에서 약 20,000그루의 애기동백꽃을 12월부터 이듬해 2월까지 감상할 수 있습니다. 또한 이번 축제에서는 오전에 인공눈으로 만들어진 눈길 위의 애기동백숲 걷기 체험, 2025년 크로코스미아축제 때 배달되는 느린 우체통 체험, 동백꽃으로 조성해놓은 예쁜 포토존 등이 있습니다. 1004번째, 2004번째, 10004번째 입장객에게는 기념품을 선물하는 입장객 이벤트도 진행합니다.</p>
+            </div> 
+
+            <a href="#" id="more-btn">더 보러 가기</a>
+        </section>
+
+        <!-- 이벤트 -->
+        <section id="event" class="p-80">
+            <div class="banner-title">
+                <h2><strong>EVENT</strong></h2>
+                <p>흥미진진한 이벤트, 놓치지 마세요!</p>
+            </div>
+            <span class="ev-img-1"><img src="/img/event/e-pink.png" alt="분홍색 폭죽"></span>
+            <span class="ev-img-2"><img src="/img/event/e-blue.png" alt="파란색 폭죽"></span>
+            <span class="ev-img-3"><img src="/img/event/e-yellow.png" alt="노란색 폭죽"></span>
+            <span class="ev-img-4"><img src="/img/event/e-balloon.png" alt="풍선"></span>
+            
+            <div id="event-swiper" class="swiper mySwiper container">
+                <div class="swiper-wrapper p-60">
+                    <div class="swiper-slide">
+                        <a href="#"><img class="ev-01" src="/img/event/e-img-01.jpg" alt="해시태그 이벤트"></a>
+                        <ul><li><a href="#"><strong>해시태그 공유 이벤트</strong></a></li><li><a href="#">2024.11.01~2024.11.30</a></li></ul>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#"><img class="ev-02" src="/img/event/e-img-02.jpg" alt="제철음식 이벤트"></a>
+                        <ul><li><a href="#"><strong>겨울 시즌 제철음식 콜라보 이벤트</strong></a></li><li><a href="#">2024.11.01~2025.02.28</a></li></ul>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#"><img class="ev-03" src="/img/event/e-img-03.jpg" alt="회원가입 이벤트"></a>
+                        <ul><li><a href="#"><strong>회원가입 감사 이벤트</strong></a></li><li><a href="#">2024.11.01~2024.11.30</a></li></ul>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#"><img class="ev-04" src="/img/event/e-img-04.jpg" alt="출석체크 이벤트"></a>
+                        <ul><li><a href="#"><strong>출석체크 이벤트</strong></a></li><li><a href="#">2024.11.01~2024.12.31</a></li></ul>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#"><img class="ev-05" src="/img/event/e-img-05.jpg" alt="축제방문 이벤트"></a>
+                        <ul><li><a href="#"><strong>'강원도 어디까지 가봤니?'</strong></a></li><li><a href="#">2024.10.01~2024.11.30</a></li></ul>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#"><img class="ev-06" src="/img/event/e-img-06.jpg" alt="뱃지획득 이벤트"></a>
+                        <ul><li><a href="#"><strong>'페스티러리 배지콕콕'</strong></a></li><li><a href="#">2024.10.01~2024.12.31</a></li></ul>
+                    </div>
+                </div>
+                <div class="swiper-pagination event-swiper-pagination"></div>
+            </div>
+        </section>
+
+        <!-- 후기 -->
+        <section id="review" class="p-80 g-60">
+            <div class="banner-title">
+                <h2><strong>후기</strong></h2>
+                <p>다른 이들이 들려주는 축제의 즐거운 순간들을 확인해보세요.</p>
+            </div>
+            <ul class="review-list container">
+                <li><a href="#" class="review-img re-img-1"></a>
+                    <ul class="review-text"><li><a href="#">#수원화성</a><a href="#">#수원화성문화재</a><a href="#">#수원가을축제</a></li></ul></li>
+                <li><a href="#" class="review-img re-img-2"></a>
+                    <ul class="review-text"><li><a href="#">#사천항공축제</a><a href="#">#사천에어쇼</a><a href="#">#사천비행장</a></li></ul></li>
+                <li><a href="#" class="review-img re-img-3"></a>
+                    <ul class="review-text"><li><a href="#">#산정호수억새꽃</a><a href="#">#억새꽃축제</a><a href="#">#가을꽃</a></li></ul></li>
+                <li><a href="#" class="review-img re-img-4"></a>
+                    <ul class="review-text"><li><a href="#">#휴애리수국</a><a href="#">#수국축제</a><a href="#">#인생사진</a></li></ul></li>
+                <li><a href="#" class="review-img re-img-5"></a>
+                    <ul class="review-text"><li><a href="#">#위도상사화축제</a><a href="#">#고슴도치섬</a><a href="#">#하얀상사화</a></li></ul></li>
+                <li><a href="#" class="review-img re-img-6"></a>
+                    <ul class="review-text"><li><a href="#">#반딧불이탐사</a><a href="#">#무주축제</a><a href="#">#무주반딧불축제</a></li></ul></li>
+            </ul>
+            <span class="re-camera"><img src="/img/review/r-camera.png" alt="사진 찍는 사람"></span>
+
+            <a href="#" id="more-btn">더 보러 가기</a>
+        </section>
+
+        <!-- 인기축제순위 -->
+        <section id="winner" class="p-80 g-60">
+            <div class="banner-title">
+                <h2><strong>축제러버들의 원픽!</strong></h2>
+                <p>올해 축제러버들의 선택을 받은 가장 사랑받는 축제!</p>
+            </div>
+            <ul class="winner-list container">
+                <li>
+                    <a href="#" class="winner-img wi-img-1"><span class="fav-btn"></span></a>
+                    <div class="winner-text">
+                        <ul class="winner-name">
+                            <li class="name-icon"><a href="#"><img src="/img/icon/icon-tag.svg" alt="해시태그 아이콘"></a></li>
+                            <li class="name-title"><a href="#">축제</a></li>
+                            <li class="name-sub"><strong><a href="#">창덕궁 달빛기행</a></strong></li>
+                        </ul>
+                        <ul class="winner-name">
+                            <li class="name-icon"><a href="#"><img src="/img/icon/icon-date.svg" alt="날짜 아이콘"></a></li>
+                            <li class="name-title"><a href="#">날짜</a></li>
+                            <li class="name-sub"><strong><a href="#">2024.09.12 ~ 2024.11.10</a></strong></li>
+                        </ul>
+                        <ul class="winner-name">
+                            <li class="name-icon"><a href="#"><img src="/img/icon/icon-navi.svg" alt="주소 아이콘"></a></li>
+                            <li class="name-title"><a href="#">위치</a></li>
+                            <li class="name-sub"><a href="#">서울특별시 종로구 율곡로 99 (와룡동)</a></li>
+                        </ul>
+                        <ul class="winner-name">
+                            <li class="name-icon"><a href="#"><img src="/img/icon/icon-time.svg" alt="시간 아이콘"></a></li>
+                            <li class="name-title"><a href="#">시간</a></li>
+                            <li class="name-sub"><a href="#">19:00 ~ 20:10</a></li>
+                        </ul>
+                        <ul class="winner-name">
+                            <li class="name-icon"><a href="#"><img src="/img/icon/icon-call.svg" alt="전화 아이콘"></a></li>
+                            <li class="name-title"><a href="#">문의</a></li>
+                            <li class="name-sub"><a href="#">국가유산진흥원 고객센터 1522-2295</a></li>
+                        </ul>
+                        <ul class="winner-name">
+                            <li class="name-icon"><a href="#"><img src="/img/icon/icon-goal.svg" alt="깃발 아이콘"></a></li>
+                            <li class="name-title"><a href="#">주최</a></li>
+                            <li class="name-sub"><a href="#">국가유산청 궁능유적본부, 국가유산진흥원</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="#" class="winner-img wi-img-2"><span class="fav-btn"></span></a>
+                    <div class="winner-text">
+                        <ul class="winner-name">
+                            <li class="name-icon"><a href="#"><img src="/img/icon/icon-tag.svg" alt="해시태그 아이콘"></a></li>
+                            <li class="name-title"><a href="#">축제</a></li>
+                            <li class="name-sub"><strong><a href="#">창덕궁 달빛기행</a></strong></li>
+                        </ul>
+                        <ul class="winner-name">
+                            <li class="name-icon"><a href="#"><img src="/img/icon/icon-date.svg" alt="날짜 아이콘"></a></li>
+                            <li class="name-title"><a href="#">날짜</a></li>
+                            <li class="name-sub"><strong><a href="#">2024.09.12 ~ 2024.11.10</a></strong></li>
+                        </ul>
+                        <ul class="winner-name">
+                            <li class="name-icon"><a href="#"><img src="/img/icon/icon-navi.svg" alt="주소 아이콘"></a></li>
+                            <li class="name-title"><a href="#">위치</a></li>
+                            <li class="name-sub"><a href="#">서울특별시 종로구 율곡로 99 (와룡동)</a></li>
+                        </ul>
+                        <ul class="winner-name">
+                            <li class="name-icon"><a href="#"><img src="/img/icon/icon-time.svg" alt="시간 아이콘"></a></li>
+                            <li class="name-title"><a href="#">시간</a></li>
+                            <li class="name-sub"><a href="#">19:00 ~ 20:10</a></li>
+                        </ul>
+                        <ul class="winner-name">
+                            <li class="name-icon"><a href="#"><img src="/img/icon/icon-call.svg" alt="전화 아이콘"></a></li>
+                            <li class="name-title"><a href="#">문의</a></li>
+                            <li class="name-sub"><a href="#">국가유산진흥원 고객센터 1522-2295</a></li>
+                        </ul>
+                        <ul class="winner-name">
+                            <li class="name-icon"><a href="#"><img src="/img/icon/icon-goal.svg" alt="깃발 아이콘"></a></li>
+                            <li class="name-title"><a href="#">주최</a></li>
+                            <li class="name-sub"><a href="#">국가유산청 궁능유적본부, 국가유산진흥원</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="#" class="winner-img wi-img-3"><span class="fav-btn"></span></a>
+                    <div class="winner-text">
+                        <ul class="winner-name">
+                            <li class="name-icon"><a href="#"><img src="/img/icon/icon-tag.svg" alt="해시태그 아이콘"></a></li>
+                            <li class="name-title"><a href="#">축제</a></li>
+                            <li class="name-sub"><strong><a href="#">창덕궁 달빛기행</a></strong></li>
+                        </ul>
+                        <ul class="winner-name">
+                            <li class="name-icon"><a href="#"><img src="/img/icon/icon-date.svg" alt="날짜 아이콘"></a></li>
+                            <li class="name-title"><a href="#">날짜</a></li>
+                            <li class="name-sub"><strong><a href="#">2024.09.12 ~ 2024.11.10</a></strong></li>
+                        </ul>
+                        <ul class="winner-name">
+                            <li class="name-icon"><a href="#"><img src="/img/icon/icon-navi.svg" alt="주소 아이콘"></a></li>
+                            <li class="name-title"><a href="#">위치</a></li>
+                            <li class="name-sub"><a href="#">서울특별시 종로구 율곡로 99 (와룡동)</a></li>
+                        </ul>
+                        <ul class="winner-name">
+                            <li class="name-icon"><a href="#"><img src="/img/icon/icon-time.svg" alt="시간 아이콘"></a></li>
+                            <li class="name-title"><a href="#">시간</a></li>
+                            <li class="name-sub"><a href="#">19:00 ~ 20:10</a></li>
+                        </ul>
+                        <ul class="winner-name">
+                            <li class="name-icon"><a href="#"><img src="/img/icon/icon-call.svg" alt="전화 아이콘"></a></li>
+                            <li class="name-title"><a href="#">문의</a></li>
+                            <li class="name-sub"><a href="#">국가유산진흥원 고객센터 1522-2295</a></li>
+                        </ul>
+                        <ul class="winner-name">
+                            <li class="name-icon"><a href="#"><img src="/img/icon/icon-goal.svg" alt="깃발 아이콘"></a></li>
+                            <li class="name-title"><a href="#">주최</a></li>
+                            <li class="name-sub"><a href="#">국가유산청 궁능유적본부, 국가유산진흥원</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="#" class="winner-img wi-img-4"><span class="fav-btn"></span></a>
+                    <div class="winner-text">
+                        <ul class="winner-name">
+                            <li class="name-icon"><a href="#"><img src="/img/icon/icon-tag.svg" alt="해시태그 아이콘"></a></li>
+                            <li class="name-title"><a href="#">축제</a></li>
+                            <li class="name-sub"><strong><a href="#">창덕궁 달빛기행</a></strong></li>
+                        </ul>
+                        <ul class="winner-name">
+                            <li class="name-icon"><a href="#"><img src="/img/icon/icon-date.svg" alt="날짜 아이콘"></a></li>
+                            <li class="name-title"><a href="#">날짜</a></li>
+                            <li class="name-sub"><strong><a href="#">2024.09.12 ~ 2024.11.10</a></strong></li>
+                        </ul>
+                        <ul class="winner-name">
+                            <li class="name-icon"><a href="#"><img src="/img/icon/icon-navi.svg" alt="주소 아이콘"></a></li>
+                            <li class="name-title"><a href="#">위치</a></li>
+                            <li class="name-sub"><a href="#">서울특별시 종로구 율곡로 99 (와룡동)</a></li>
+                        </ul>
+                        <ul class="winner-name">
+                            <li class="name-icon"><a href="#"><img src="/img/icon/icon-time.svg" alt="시간 아이콘"></a></li>
+                            <li class="name-title"><a href="#">시간</a></li>
+                            <li class="name-sub"><a href="#">19:00 ~ 20:10</a></li>
+                        </ul>
+                        <ul class="winner-name">
+                            <li class="name-icon"><a href="#"><img src="/img/icon/icon-call.svg" alt="전화 아이콘"></a></li>
+                            <li class="name-title"><a href="#">문의</a></li>
+                            <li class="name-sub"><a href="#">국가유산진흥원 고객센터 1522-2295</a></li>
+                        </ul>
+                        <ul class="winner-name">
+                            <li class="name-icon"><a href="#"><img src="/img/icon/icon-goal.svg" alt="깃발 아이콘"></a></li>
+                            <li class="name-title"><a href="#">주최</a></li>
+                            <li class="name-sub"><a href="#">국가유산청 궁능유적본부, 국가유산진흥원</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="#" class="winner-img wi-img-5"><span class="fav-btn"></span></a>
+                    <div class="winner-text">
+                        <ul class="winner-name">
+                            <li class="name-icon"><a href="#"><img src="/img/icon/icon-tag.svg" alt="해시태그 아이콘"></a></li>
+                            <li class="name-title"><a href="#">축제</a></li>
+                            <li class="name-sub"><strong><a href="#">창덕궁 달빛기행</a></strong></li>
+                        </ul>
+                        <ul class="winner-name">
+                            <li class="name-icon"><a href="#"><img src="/img/icon/icon-date.svg" alt="날짜 아이콘"></a></li>
+                            <li class="name-title"><a href="#">날짜</a></li>
+                            <li class="name-sub"><strong><a href="#">2024.09.12 ~ 2024.11.10</a></strong></li>
+                        </ul>
+                        <ul class="winner-name">
+                            <li class="name-icon"><a href="#"><img src="/img/icon/icon-navi.svg" alt="주소 아이콘"></a></li>
+                            <li class="name-title"><a href="#">위치</a></li>
+                            <li class="name-sub"><a href="#">서울특별시 종로구 율곡로 99 (와룡동)</a></li>
+                        </ul>
+                        <ul class="winner-name">
+                            <li class="name-icon"><a href="#"><img src="/img/icon/icon-time.svg" alt="시간 아이콘"></a></li>
+                            <li class="name-title"><a href="#">시간</a></li>
+                            <li class="name-sub"><a href="#">19:00 ~ 20:10</a></li>
+                        </ul>
+                        <ul class="winner-name">
+                            <li class="name-icon"><a href="#"><img src="/img/icon/icon-call.svg" alt="전화 아이콘"></a></li>
+                            <li class="name-title"><a href="#">문의</a></li>
+                            <li class="name-sub"><a href="#">국가유산진흥원 고객센터 1522-2295</a></li>
+                        </ul>
+                        <ul class="winner-name">
+                            <li class="name-icon"><a href="#"><img src="/img/icon/icon-goal.svg" alt="깃발 아이콘"></a></li>
+                            <li class="name-title"><a href="#">주최</a></li>
+                            <li class="name-sub"><a href="#">국가유산청 궁능유적본부, 국가유산진흥원</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="#" class="winner-img wi-img-6"><span class="fav-btn"></span></a>
+                    <div class="winner-text">
+                        <ul class="winner-name">
+                            <li class="name-icon"><a href="#"><img src="/img/icon/icon-tag.svg" alt="해시태그 아이콘"></a></li>
+                            <li class="name-title"><a href="#">축제</a></li>
+                            <li class="name-sub"><strong><a href="#">창덕궁 달빛기행</a></strong></li>
+                        </ul>
+                        <ul class="winner-name">
+                            <li class="name-icon"><a href="#"><img src="/img/icon/icon-date.svg" alt="날짜 아이콘"></a></li>
+                            <li class="name-title"><a href="#">날짜</a></li>
+                            <li class="name-sub"><strong><a href="#">2024.09.12 ~ 2024.11.10</a></strong></li>
+                        </ul>
+                        <ul class="winner-name">
+                            <li class="name-icon"><a href="#"><img src="/img/icon/icon-navi.svg" alt="주소 아이콘"></a></li>
+                            <li class="name-title"><a href="#">위치</a></li>
+                            <li class="name-sub"><a href="#">서울특별시 종로구 율곡로 99 (와룡동)</a></li>
+                        </ul>
+                        <ul class="winner-name">
+                            <li class="name-icon"><a href="#"><img src="/img/icon/icon-time.svg" alt="시간 아이콘"></a></li>
+                            <li class="name-title"><a href="#">시간</a></li>
+                            <li class="name-sub"><a href="#">19:00 ~ 20:10</a></li>
+                        </ul>
+                        <ul class="winner-name">
+                            <li class="name-icon"><a href="#"><img src="/img/icon/icon-call.svg" alt="전화 아이콘"></a></li>
+                            <li class="name-title"><a href="#">문의</a></li>
+                            <li class="name-sub"><a href="#">국가유산진흥원 고객센터 1522-2295</a></li>
+                        </ul>
+                        <ul class="winner-name">
+                            <li class="name-icon"><a href="#"><img src="/img/icon/icon-goal.svg" alt="깃발 아이콘"></a></li>
+                            <li class="name-title"><a href="#">주최</a></li>
+                            <li class="name-sub"><a href="#">국가유산청 궁능유적본부, 국가유산진흥원</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+            <span class="wi-garland"><img src="/img/winner/w-garland.png" alt="가랜드"></span>
+            <span class="wi-balloon"><img src="/img/winner/w-balloon.png" alt="열기구"></span>
+        </section>
+
+        <!-- 공지사항 -->
+        <section id="notice" class="p-80 g-60">
+            <div class="banner-title">
+                <h2><strong>FESTIRARY 소식</strong></h2>
+                <p>페스티러리의 다양한 소식을 알려드립니다.</p>
+            </div>
+            <div class="notice-list container">
+                <dl class="notice-box">
+                    <dt class="notice-title"><strong><a href="#">페스터리리 후기 사진 공모전 안내</a></strong></dt>
+                    <dd class="notice-date"><a href="#">2024.10.04</a></dd>
+                    <dd class="notice-sub"><a href="#">2024 페스티러리 후기 사진 공모전 접수가 시작됩니다! 접수기간은 2024년 10월 04일부터 11월 18일 16시까지입니다. 금번 공모 주제는 [축제의 특별한 순간]으로 그 장소, 그 시기, 그 시간에만 볼 수 있는 한국의 아름다운 순간을 담은 작품을 선정할 예정입니다.</a></dd>
+                </dl>
+                <dl class="notice-box">
+                    <dt class="notice-title"><strong><a href="#">청송사과축제 푸드트럭 운영 모집</a></strong></dt>
+                    <dd class="notice-date"><a href="#">2024.09.20</a></dd>
+                    <dd class="notice-sub"><a href="#">청송사과축제에서 푸드트럭 운영 할 분들을 모집합니다. ◆ 모집개요 ○ 운영기간 : 2024. 10. 30 ~ 11. 03 / 5일간 ○ 운영장소 : 경상북도 청송군 청송읍 월막리 ○ 모집규모 : 00개 업체 ○ 참가자격 - 지방자치단체에서 푸드트럭 영업신고권을 소지필수</a></dd>
+                </dl>
+                <dl class="notice-box">
+                    <dt class="notice-title"><strong><a href="#">축제정보 종합포털 설문조사</a></strong></dt>
+                    <dd class="notice-date"><a href="#">2024.08.13</a></dd>
+                    <dd class="notice-sub"><a href="#">페스티러리는 축제 관련 콘텐츠를 종합적으로 제공하기 위해 포털 서비스 및 관리 시스템의 구현 계획을 수립하고 있습니다. 이에 따라, 다음과 같이 설문조사를 진행하고자 하오니 많은 참여 바랍니다. □ 내용 : 체육포털 포함 대국민 웹사이트 요구분석 및 인공지능 서비스 수요조사</a></dd>
+                </dl>
+            </div>
+            <span class="no-cloud-1"><img src="/img/notice/n-cloud-01.png" alt="왼쪽 구름"></span>
+            <span class="no-cloud-2"><img src="/img/notice/n-cloud-02.png" alt="오른쪽 구름"></span>
+
+            <a href="#" id="more-btn">더 보러 가기</a>
+        </section>
+
+        <!-- 자주하는 질문 -->
+        <section id="faq" class="container p-80 g-60">
+            <div class="banner-title">
+                <h2><strong>자주하는 질문</strong></h2>
+                <p>최근 자주 물으시는 질문에 대한 답변을 모아두었습니다.</p>
+            </div>
+            <ul class="faq-list">
+                <li><a href="#">아이디/패스워드를 모르겠어요</a></li>
+                <li><a href="#">축제 운영 여부를 알고 싶어요</a></li>
+                <li><a href="#">축제 등록은 얼마나 걸리나요?</a></li>
+                <li><a href="#">원하는 축제를 찾을 수 없어요</a></li>
+                <li><a href="#">가고 싶은 축제를 저장하고 싶어요</a></li>
+                <li><a href="#">축제 분류를 변경하고 싶어요</a></li>
+            </ul>
+
+            <a href="#" id="more-btn">더 보러 가기</a>
+        </section>
+
+        <!-- 후원사 -->
+        <section id="partner" class="container p-80 g-60">
+            <div class="banner-title">
+                <h2><strong>FESTIRARY와 함께 해주시는 분들</strong></h2>
+                <p>즐거운 축제를 위한 든든한 파트너가 함께 합니다.</p>
+            </div>
+            <div id="partner-swiper" class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="/img/partner/seoul.jpg" alt="서울 로고"></div>
+                    <div class="swiper-slide"><img src="/img/partner/gyeonggi.jpg" alt="경기 로고"></div>
+                    <div class="swiper-slide"><img src="/img/partner/incheon.jpg" alt="인천 로고"></div>
+                    <div class="swiper-slide"><img src="/img/partner/gangwon.jpg" alt="강원 로고"></div>
+                    <div class="swiper-slide"><img src="/img/partner/daejeon.jpg" alt="대전 로고"></div>
+                    <div class="swiper-slide"><img src="/img/partner/chungnam.jpg" alt="충남 로고"></div>
+                    <div class="swiper-slide"><img src="/img/partner/chungbuk.jpg" alt="충북 로고"></div>
+                    <div class="swiper-slide"><img src="/img/partner/sejong.jpg" alt="세종 로고"></div>
+                    <div class="swiper-slide"><img src="/img/partner/busan.jpg" alt="부산 로고"></div>
+                    <div class="swiper-slide"><img src="/img/partner/ulsan.jpg" alt="울산 로고"></div>
+                    <div class="swiper-slide"><img src="/img/partner/daegu.jpg" alt="대구 로고"></div>
+                    <div class="swiper-slide"><img src="/img/partner/gyeongbuk.jpg" alt="경북 로고"></div>
+                    <div class="swiper-slide"><img src="/img/partner/gyeongnam.jpg" alt="경남 로고"></div>
+                    <div class="swiper-slide"><img src="/img/partner/jeonnam.jpg" alt="전남 로고"></div>
+                    <div class="swiper-slide"><img src="/img/partner/gwangju.jpg" alt="광주 로고"></div>
+                    <div class="swiper-slide"><img src="/img/partner/jeonbuk.jpg" alt="전북 로고"></div>
+                    <div class="swiper-slide"><img src="/img/partner/jeju.jpg" alt="제주 로고"></div>
+                    <div class="swiper-slide"><img src="/img/partner/ulleungdo.jpg" alt="울릉 로고"></div>
+                    <div class="swiper-slide"><img src="/img/partner/dokdo.jpg" alt="독도 로고"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+<?php include_once("./layout/footer.html"); ?>
