@@ -1,7 +1,166 @@
 <?php include_once("../layout/header.html"); ?>
-    <section id="event-all" class="container p-80 g-60">
-        <div class="banner-title">
-            <h2><strong>진행중인 이벤트</strong></h2>
+<main id="event-page">
+    <article class="container mt-5 p-80 g-60">
+        <h2><strong>이벤트</strong></h2>
+        <!-- Tabs -->
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item col-4" role="presentation">
+                <a class="nav-link active" id="ing-tab" data-bs-toggle="tab" href="#ing" role="tab" aria-controls="ing" aria-selected="true">진행중인 이벤트</a>
+            </li>
+            <li class="nav-item col-4" role="presentation">
+                <a class="nav-link" id="end-tab" data-bs-toggle="tab" href="#end" role="tab" aria-controls="end" aria-selected="false">종료된 이벤트</a>
+            </li>
+            <li class="nav-item col-4" role="presentation">
+                <a class="nav-link" id="winner-tab" data-bs-toggle="tab" href="#winner" role="tab" aria-controls="winner" aria-selected="false">당첨자 발표</a>
+            </li>
+        </ul>
+
+
+        <!-- Tab Content -->
+        <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="ing" role="tabpanel" aria-labelledby="ing-tab">
+                <ul class="list">
+                    <li>
+                        <a href="#" class="list-item">
+                            <span class="img-wrap">
+                                <img src="/img/sub/event/e-s-img-01.jpg" alt="해시태그 이벤트">
+                            </span>
+                            <span class="text-wrap">
+                                <span class="date">2024.11.01 ~ 2024.11.30</span>
+                                <span class="title">해시태그 공유 이벤트</span>
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="list-item">
+                            <span class="img-wrap">
+                                <img src="/img/sub/event/e-s-img-02.jpg" alt="제철음식 이벤트">
+                            </span>
+                            <span class="text-wrap">
+                                <span class="date">2024.11.01 ~ 2025.02.28</span>
+                                <span class="title">겨울 시즌 제철음식 콜라보 이벤트</span>
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="list-item">
+                            <span class="img-wrap">
+                                <img src="/img/sub/event/e-s-img-03.jpg" alt="회원가입 이벤트">
+                            </span>
+                            <span class="text-wrap">
+                                <span class="date">2024.11.01 ~ 2024.11.30</span>
+                                <span class="title">회원가입 감사 이벤트</span>
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="list-item">
+                            <span class="img-wrap">
+                                <img src="/img/sub/event/e-s-img-04.jpg" alt="출석체크 이벤트">
+                            </span>
+                            <span class="text-wrap">
+                                <span class="date">2024.11.01 ~ 2024.12.31</span>
+                                <span class="title">출석체크 이벤트</span>
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="tab-pane fade" id="end" role="tabpanel" aria-labelledby="end-tab">
+                <ul class="list">
+                    <li>
+                        <a href="#" class="list-item">
+                            <span class="img-wrap">
+                                <img src="/img/sub/event/e-s-img-06.jpg" alt="후기 이벤트">
+                            </span>
+                            <span class="text-wrap">
+                                <span class="date">2024.09.01 ~ 2024.09.30</span>
+                                <span class="title">‘FESTIRARY’ 후기 이벤트!</span>
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="list-item">
+                            <span class="img-wrap">
+                                <img src="/img/sub/event/e-s-img-05.jpg" alt="제철음식 이벤트">
+                            </span>
+                            <span class="text-wrap">
+                                <span class="date">2024.08.01 ~ 2024.08.30</span>
+                                <span class="title">문화관광축제 퀴즈 이벤트</span>
+                            </span>
+                        </a>
+                    </li>
+
+            </div>
+            <div class="tab-pane fade" id="winner" role="tabpanel" aria-labelledby="winner-tab">
+                <ul class="list">
+                    <li>
+                        <a href="#" class="winner-item">
+                            <span class="title">‘FESTIRARY’ 후기 이벤트! 당첨자 발표</span>
+                            <span class="date">2024.09.01 ~ 2024.09.30</span>
+                        </a>
+                        <p class="detail">
+                            <strong>‘FESTIRARY’ 후기 이벤트 당첨자 발표</strong><br>
+                            안녕하세요, ‘FESTIRARY’ 이벤트에 참여해 주신 모든 분들께 감사드립니다!<br>
+                            우수한 후기와 열정적인 참여 덕분에 당첨자를 발표하게 되었습니다. 아래는 ‘FESTIRARY’ 후기 이벤트의 당첨자 명단입니다:)<br>
+                            <br>
+                            1. 한수지<br>
+                            2. 어선영<br>
+                            3. 이세현<br>
+                            4. 박지혜<br>
+                            <br>
+                            당첨된 분들께는 개별적으로 연락드려 상품을 전달해 드리겠습니다.<br>
+                            참여해 주신 모든 분들께 감사드리며, 앞으로도 더 많은 이벤트와 소식으로 찾아뵙겠습니다. 축하드립니다!<br>
+                        </p>
+                    </li>
+                    <li>
+                        <a href="#" class="winner-item">
+                            <span class="title">문화관광축제 퀴즈 맞추고 다이어리 받자! 당첨자 발표</span>
+                            <span class="date">2024.08.01 ~ 2024.08.30</span>
+                        </a>
+                        <p class="detail">
+                            <strong>문화관광축제 퀴즈 맞추고 다이어리 받자! 당첨자 발표</strong><br>
+                            안녕하세요, 문화관광축제 퀴즈에 참여해 주신 모든 분들께 감사드립니다!<br>
+                            정답을 맞춰주신 여러분 중에서 다이어리 당첨자를 발표합니다:)<br>
+                            <br>
+                            1. 전유진<br>
+                            2. 심채림<br>
+                            3. 김소정<br>
+                            <br>
+                            당첨되신 분들께는 개별적으로 연락드려 다이어리를 보내드리겠습니다.<br>
+                            참여해 주신 모든 분들께 진심으로 감사드리며, 앞으로도 많은 관심과 참여 부탁드립니다.<br>
+                        </p>
+                    </li>
+                </ul>
+            </div>
         </div>
-    </section>
+
+
+        <nav class="page-btn" aria-label="Page navigation example">
+            <ul class="pagination justify-content-center">
+                <li class="page-item">
+                    <a class="page-link-move" href="#none" aria-label="Previous">
+                    <span class="left" aria-hidden="true"></span>
+                    </a>
+                </li>
+
+                <li class="page-item active" aria-current="page">
+                    <a class="page-link" href="#none">1</a>
+                </li>
+
+                <li class="page-item"><a class="page-link" href="#none">2</a></li>
+
+                <li class="page-item"><a class="page-link" href="#none">3</a></li>
+
+                <li class="page-item">
+                    <a class="page-link-move" href="#none" aria-label="Next">
+                    <span class="right" aria-hidden="true"></span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </article>
+</main>
+
+
 <?php include_once("../layout/footer.html"); ?>

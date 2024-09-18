@@ -1,0 +1,75 @@
+<?php include_once("../layout/header.html"); ?>
+<main id="faq-page">
+    <article class="container mt-5 p-80 g-60">
+        <h2><strong>자주하는질문</strong></h2>
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item col-4" role="presentation">
+                <a class="nav-link active" id="ing-tab" data-bs-toggle="tab" href="#member" role="tab" aria-controls="member" aria-selected="true">회원</a>
+            </li>
+            <li class="nav-item col-4" role="presentation">
+                <a class="nav-link" id="end-tab" data-bs-toggle="tab" href="#info" role="tab" aria-controls="info" aria-selected="false">축제 정보</a>
+            </li>
+            <li class="nav-item col-4" role="presentation">
+                <a class="nav-link" id="winner-tab" data-bs-toggle="tab" href="#register" role="tab" aria-controls="register" aria-selected="false">축제 등록</a>
+            </li>
+        </ul>
+        <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="member" role="tabpanel" aria-labelledby="ing-tab">
+                <dl>
+                    <dt tabindex="0"><span>[회원]</span>아이디/패스워드를 모르겠어요</dt>
+                    <dd>로그인이 실패했다는 메시지가 나온다면 아이디나 패스워드가 틀린 것입니다. <br>
+                        로그인 창의 '아이디/비밀번호 찾기'를 통해 임시 비밀번호를 메일로 받으세요. <br>
+                        만약 메일이 도착하지 않는다면 고객센터로 문의를 남겨주시길 바랍니다.</dd>
+    
+                    <dt tabindex="0"><span>[회원]</span>회원가입이 안돼요</dt>
+                    <dd>개인정보보호법상, 회원가입은 직접 하셔야 합니다.<br>
+                    홈페이지(PC) 우측 상단에 회원가입 버튼이 있습니다.<br>
+                    이용약관에 동의하시고 가입을 진행해주세요.<br>
+                    회원가입 완료를 누르시면 가입이 완료 됩니다.</dd>
+                    
+                    <dt tabindex="0"><span>[회원]</span>수신동의 여부나 회원정보 변경하고 싶어요</dt>
+                    <dd>개인정보보호법상, 이메일 수신동의 혹은 거부 설정은 직접 변경해주셔야 합니다.<br>
+                    홈페이지(PC) 우측 상단 로그인 버튼을 클릭 후 로그인 해주세요.<br>
+                    로그인 후 우측 상단 내정보 버튼을 클릭하신 후 개인정보 수정을 진행해주세요.<br>
+                    정보수정 완료 후에는 하단의 수정완료 버튼을 반드시 클릭해야 합니다.</dd>
+    
+                    <dt tabindex="0"><span>[회원]</span>휴면 및 탈퇴 기준은 어떻게 되나요?</dt>
+                    <dd>개인정보보호법 제 21조, 행정안전부 표준 개인정보보호지침 제 60조, 페스티러리 홈페이지 이용약관 제7조(회원의 유효기간)에 따라 회원정보 휴면 및 탈퇴 시행하고자 합니다.<br>
+                    - 페스티러리는 홈페이지 휴면 및 탈퇴회원으로 변경되기 <strong>~30일 전 자동으로 안내 문자를 발송</strong>하고 있습니다.<br>
+                    * 휴면기준 : <strong>마지막 들어온 날로부터 1년 경과 시 자동 휴면</strong><br>
+                    * 탈퇴기준 : <strong>휴면 된 날로부터 2년 경과 시 자동 탈퇴</strong><br>
+                    - 회원정보 유지를 원하시면 페스티러리 홈페이지 접속 후 로그인 해주시기 바랍니다.<br>
+                    </dd>
+                </dl>
+            </div>
+            <div class="tab-pane fade" id="info" role="tabpanel" aria-labelledby="end-tab">
+                <dl>
+                    <dt tabindex="0"><span>[축제 이용]</span>축제 운영 여부를 알고 싶어요</dt>
+                    <dd>날씨 등으로 인한 축제의 실운영 여부, 주차 가능 여부, 티켓 구매 방법과 같은 세부 정보는 해당 축제의 문의처로 직접 연락하여 확인하실 수 있습니다.</dd>
+
+                    <dt tabindex="0"><span>[축제 이용]</span>원하는 축제를 찾을 수 없어요</dt>
+                    <dd>원하는 축제를 찾고 싶은데 검색이 되지 않는 경우 해당 축제가 등록되어 있지 않거나 축제명이 일치하지 않는 경우일 수 있습니다.<br>
+                        등록되어 있지 않다면 고객센터로 문의를 남겨주시면 최대한 빠른 시간안에 축제가 등록되도록 조치하겠습니다.</dd>
+
+                    <dt tabindex="0"><span>[축제 이용]</span>가고 싶은 축제를 저장하고 싶어요</dt>
+                    <dd>가고 싶은 축제를 저장하려면, 좋아요 버튼을 사용하세요.<Br>
+                        이후 저장한 축제는 내정보에서 언제든지 확인할 수 있습니다.</dd>
+                </dl>
+
+            </div>
+            <div class="tab-pane fade" id="register" role="tabpanel" aria-labelledby="winner-tab">
+                <dl>
+                    <dt tabindex="0"><span>[축제 등록]</span>축제 분류를 변경하고 싶어요</dt>
+                    <dd>분류 변경은 내부 운영 가이드에 따라 결정되므로, 변경을 원하시는 경우 관련 내용을 전달해주시면 검토 후 회신 드리겠습니다.<br>
+                        분류 변경에 대한 검토가 필요하기 때문에 시간이 소요될 수 있으며, 반려될 가능성도 있음을 참고해 주세요.</dd>
+
+                    <dt tabindex="0"><span>[축제 등록]</span>축제 등록은 얼마나 걸리나요?</dt>
+                    <dd>축제 등록은 자료 확인 후 순차적으로 등록이 진행됩니다. 신청 순서대로 처리되며, 축제 성수기 시즌(8~10월)에는 다소 시간이 소요될 수 있습니다.<br>
+                        축제 페이지 반영은 평균 2일이 소요되며, 포털 사이트(네이버/다음) 반영은 홈페이지 반영 후 추가적으로 평균 2-3일 정도 더 필요합니다.<br>
+                        여유로운 축제 등록을 위하여 개최 2주 전까지 자료 제출을 권장드립니다.</dd>
+                </dl>
+            </div>
+        </div>
+    </article>
+</main>
+<?php include_once("../layout/footer.html"); ?>

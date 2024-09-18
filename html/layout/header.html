@@ -21,19 +21,20 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <!-- 슬릭 css cdn -->
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-    <!-- main.scss -->
+    <!-- min.scss -->
+    <link rel="stylesheet" href="/scss/common.min.css">
+    <link rel="stylesheet" href="/scss/layout.min.css">
     <link rel="stylesheet" href="/scss/main.min.css?var=s<?php echo time(); ?>">
-    <link rel="stylesheet" href="/css/main.css">
 </head>
 <body>
     <div id="wrap">
         <header id="header">
             <div class="container">
-                <h1><a href="/index.html"><img src="/img/logo.svg" alt="메인로고 이미지"></a></h1>
+                <h1><a href="/index.html"><img src="/img/logo.svg" alt="메인로고 이미지"></a><span class="blind">FESTIRARY</span></h1>
                 <nav>
                     <ul class="depth-01">
                         <li>
-                            <a href="#">회사소개</a>
+                            <a href="#" class="noto-sans-kr-600">회사소개</a>
                             <ul class="depth-02">
                                 <li><a href="#">FESTIRARY</a></li>
                                 <li><a href="#">CI 소개</a></li>
@@ -41,7 +42,7 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="#">축제정보</a>
+                            <a href="#" class="noto-sans-kr-600">축제정보</a>
                             <ul class="depth-02">
                                 <li><a href="#">축제검색</a></li>
                                 <li><a href="#">축제달력</a></li>
@@ -50,26 +51,21 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="/sub/event.html">이벤트</a>
-                            <ul class="depth-02">
-                                <li><a href="#">진행중인 이벤트</a></li>
-                                <li><a href="#">종료된 이벤트</a></li>
-                                <li><a href="#">당첨자 발표</a></li>
-                            </ul>
+                            <a href="/sub/event.html" class="noto-sans-kr-600">이벤트</a>
                         </li>
                         <li>
-                            <a href="#">커뮤니티</a>
+                            <a href="#" class="noto-sans-kr-600">커뮤니티</a>
                             <ul class="depth-02">
                                 <li><a href="#">후기게시판</a></li>
                                 <li><a href="#">자유게시판</a></li>
                             </ul>
                         </li>
                         <li>
-                            <a href="#">고객센터</a>
+                            <a href="#none" class="noto-sans-kr-600 lockMenu">고객센터</a>
                             <ul class="depth-02">
-                                <li><a href="#">공지사항</a></li>
-                                <li><a href="#">1:1문의</a></li>
-                                <li><a href="#">FAQ</a></li>
+                                <li><a href="/sub/notice.html">공지사항</a></li>
+                                <li><a href="/sub/ask.html">1:1문의</a></li>
+                                <li><a href="/sub/faq.html">자주하는질문</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -78,26 +74,23 @@
                     <li><a href="#"><img src="/img/icon/icon-login.svg" alt="로그인 아이콘" data-origin="/img/icon/icon-login.svg" data-img="/img/icon/icon-hover-login.svg"></a></li>
                     <li><a href="#"><img src="/img/icon/icon-join.svg" alt="회원가입 아이콘" data-origin="/img/icon/icon-join.svg" data-img="/img/icon/icon-hover-join.svg"></a></li>
                     <li><a href="#"><img src="/img/icon/icon-mypage.svg" alt="내정보 아이콘" data-origin="/img/icon/icon-mypage.svg" data-img="/img/icon/icon-hover-mypage.svg"></a></li>
-                    <li><a class="search-btn" href="#"><img src="/img/icon/icon-search.svg" alt="검색 아이콘" data-origin="/img/icon/icon-search.svg" data-img="/img/icon/icon-close.svg"></a></li>
+                    <li><a class="search-btn" href="#"><img class="search-icon" src="/img/icon/icon-search.svg" alt="검색 아이콘"></a></li>
                 </ul>
                 <div class="header-bg"></div>
                 
-                <div class="search-popup">
-                    <div class="search-box">
-                        <div class="search-content">
-                            <form id="search-form">
-                                <input type="text" id="search-input">
-                                <button type="submit" class="i-search"></button>
-                            </form>
-                        </div>
-                        <ul class="favor-list">
-                            <li><a href="#">#삼릉숲</a></li>
-                            <li><a href="#">#등불축제</a></li>
-                            <li><a href="#">#문화유산</a></li>
-                        </ul>
-                    </div> 
-                </div>               
+                <div class="search-box">
+                    <form class="search-content">
+                        <input type="text" id="search-input">
+                        <button type="submit" class="i-search"></button>
+                    </form>
+                    <ul class="favor-list">
+                        <li><a href="#">#삼릉숲</a></li>
+                        <li><a href="#">#등불축제</a></li>
+                        <li><a href="#">#문화유산</a></li>
+                    </ul>
+                </div>
+
             </div>
-            <!-- <div class="search-modal"></div> -->
         </header>
+        <div class="search-modal"></div> 
         
