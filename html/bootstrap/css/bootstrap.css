@@ -75,7 +75,6 @@
   --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
   /* --bs-body-font-family: var(--bs-font-sans-serif); */
-  --bs-body-font-family: var(--bs-font-noto-sans-kr);
   --bs-body-font-size: 1rem;
   --bs-body-font-weight: 400;
   --bs-body-line-height: 1.5;
@@ -1862,8 +1861,8 @@ progress {
   --bs-table-color-state: initial;
   --bs-table-bg-state: initial;
   --bs-table-color: var(--bs-emphasis-color);
-  /* --bs-table-bg: var(--bs-body-bg); */
-  /* --bs-table-border-color: var(--bs-border-color); */
+  /* --bs-table-bg: var(--bs-body-bg);
+  --bs-table-border-color: var(--bs-border-color); */
   --bs-table-accent-bg: transparent;
   /* --bs-table-striped-color: var(--bs-emphasis-color);
   --bs-table-striped-bg: rgba(var(--bs-emphasis-color-rgb), 0.05); */
@@ -1877,7 +1876,7 @@ progress {
   border-color: var(--bs-table-border-color);
 }
 .table > :not(caption) > * > * {
-  padding: 0.5rem 0.5rem;
+  /* padding: 0.5rem 0.5rem; */
   color: var(--bs-table-color-state, var(--bs-table-color-type, var(--bs-table-color)));
   background-color: var(--bs-table-bg);
   border-bottom-width: var(--bs-border-width);

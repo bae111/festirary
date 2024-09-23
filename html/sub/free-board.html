@@ -1,0 +1,85 @@
+<?php include_once("../layout/header.html"); ?>
+<main id="free-page">
+    <article class="container mt-5 p-80 g-60">
+        <h2>자유게시판</h2>
+        <div class="free-content">
+            <div class="board-btn">
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control">
+                    <button class="btn btn-outline-secondary" type="button" id="button-addon2">검색</button>
+                </div>
+                <a class="writing-btn btn btn-outline-secondary mb-3" href="#">글쓰기</a>
+            </div>
+            <div class="table-wrap"> 
+              <table class="board all-open">             
+                  <caption></caption> 
+                  <colgroup> 
+                    <col> 
+                    <col style="width:50%;"> 
+                    <col span="3"> 
+                  </colgroup> 
+                  <thead> 
+                    <tr> 
+                      <th scope="col">번호</th> 
+                      <th scope="col">제목</th> 
+                      <th scope="col">작성자</th> 
+                      <th scope="col">등록일</th> 
+                      <th scope="col">조회수</th> 
+                    </tr> 
+                  </thead> 
+                  <tbody> 
+                    <tr> 
+                      <td class="num">3</td> 
+                      <td class="subject"><a href="#" class="ellipsis" title="축제 여행 팁!">축제 여행 팁!</a></td> 
+                      <td class="name">박은지</td> 
+                      <td class="date">2024-10-05</td> 
+                      <td class="hit">965</td> 
+                    </tr> 
+                    <tr> 
+                      <td class="num">2</td> 
+                      <td class="subject"><a href="#" class="ellipsis" title="가을 단풍 축제 추천!">가을 단풍 축제 추천!</a></td> 
+                      <td class="name">이세현</td> 
+                      <td class="date">2024-09-05</td> 
+                      <td class="hit">1043</td> 
+                    </tr> 
+                    <tr> 
+                      <td class="num">1</td> 
+                      <td class="subject"><a href="#" class="ellipsis" title="서울 밤도깨비 야시장 가는 길">장안문거북시장 야장 별주부전 야시장 가는 길</a></td> 
+                      <td class="name">전유진</td> 
+                      <td class="date">2024-06-10</td> 
+                      <td class="hit">1378</td> 
+                    </tr>  
+                  </tbody> 
+                </table> 
+              </div>
+
+        </div>
+        <nav class="page-btn" aria-label="Page navigation example">
+            <ul class="pagination justify-content-center">
+                <li class="page-item">
+                    <a class="page-link-move" href="#none" aria-label="Previous">
+                    <span class="left" aria-hidden="true"></span>
+                    </a>
+                </li>
+
+                <li class="page-item active" aria-current="page">
+                    <a class="page-link" href="#none">1</a>
+                </li>
+
+                <li class="page-item"><a class="page-link" href="#none">2</a></li>
+
+                <li class="page-item"><a class="page-link" href="#none">3</a></li>
+
+                <li class="page-item">
+                    <a class="page-link-move" href="#none" aria-label="Next">
+                    <span class="right" aria-hidden="true"></span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </article>
+</main>
+
+
+
+<?php include_once("../layout/footer.html"); ?>

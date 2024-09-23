@@ -11,16 +11,16 @@
     <link rel="mask-icon" href="/img/faviocn/safari-pinned-tab.svg" color="#000000">
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="theme-color" content="#ffffff">
-    <link rel="stylesheet" href="/css/reset.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/font.css">
-    <link rel="stylesheet" href="/bootstrap/css/bootstrap.css">
     <!-- 스와이퍼 css cdn -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <!-- 슬릭 css cdn -->
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/font.css">
+    <link rel="stylesheet" href="/css/reset.css">
     <!-- min.scss -->
     <link rel="stylesheet" href="/scss/common.min.css">
     <link rel="stylesheet" href="/scss/layout.min.css">
@@ -30,34 +30,28 @@
     <div id="wrap">
         <header id="header">
             <div class="container">
-                <h1><a href="/index.html"><img src="/img/logo.svg" alt="메인로고 이미지"></a><span class="blind">FESTIRARY</span></h1>
+                <h1><a href="/"><img src="/img/logo.svg" alt="메인로고 이미지"></a><span class="blind">FESTIRARY</span></h1>
                 <nav>
                     <ul class="depth-01">
                         <li>
-                            <a href="#" class="noto-sans-kr-600">회사소개</a>
-                            <ul class="depth-02">
-                                <li><a href="#">FESTIRARY</a></li>
-                                <li><a href="#">CI 소개</a></li>
-                                <li><a href="#">오시는 길</a></li>
-                            </ul>
+                            <a href="/sub/company.html" class="noto-sans-kr-600">FESTIRARY</a>
                         </li>
                         <li>
-                            <a href="#" class="noto-sans-kr-600">축제정보</a>
+                            <a href="#none" class="noto-sans-kr-600 lockMenu">축제정보</a>
                             <ul class="depth-02">
-                                <li><a href="#">축제검색</a></li>
-                                <li><a href="#">축제달력</a></li>
-                                <li><a href="#">이달의 제철음식</a></li>
-                                <li><a href="#">축제자료실</a></li>
+                                <li><a href="#none">축제검색</a></li>
+                                <li><a href="/sub/seasonal-food.html">이달의 제철음식</a></li>
+                                <li><a href="/sub/archive.html">축제자료실</a></li>
                             </ul>
                         </li>
                         <li>
                             <a href="/sub/event.html" class="noto-sans-kr-600">이벤트</a>
                         </li>
                         <li>
-                            <a href="#" class="noto-sans-kr-600">커뮤니티</a>
+                            <a href="#none" class="noto-sans-kr-600 lockMenu">커뮤니티</a>
                             <ul class="depth-02">
-                                <li><a href="#">후기게시판</a></li>
-                                <li><a href="#">자유게시판</a></li>
+                                <li><a href="/sub/review.html">후기게시판</a></li>
+                                <li><a href="/sub/free-board.html">자유게시판</a></li>
                             </ul>
                         </li>
                         <li>
@@ -71,9 +65,9 @@
                     </ul>
                 </nav>
                 <ul class="util-list">
-                    <li><a href="#"><img src="/img/icon/icon-login.svg" alt="로그인 아이콘" data-origin="/img/icon/icon-login.svg" data-img="/img/icon/icon-hover-login.svg"></a></li>
-                    <li><a href="#"><img src="/img/icon/icon-join.svg" alt="회원가입 아이콘" data-origin="/img/icon/icon-join.svg" data-img="/img/icon/icon-hover-join.svg"></a></li>
-                    <li><a href="#"><img src="/img/icon/icon-mypage.svg" alt="내정보 아이콘" data-origin="/img/icon/icon-mypage.svg" data-img="/img/icon/icon-hover-mypage.svg"></a></li>
+                    <li><a href="#none"><img src="/img/icon/icon-login.svg" alt="로그인 아이콘" data-origin="/img/icon/icon-login.svg" data-img="/img/icon/icon-hover-login.svg"></a></li>
+                    <li><a href="#none"><img src="/img/icon/icon-join.svg" alt="회원가입 아이콘" data-origin="/img/icon/icon-join.svg" data-img="/img/icon/icon-hover-join.svg"></a></li>
+                    <li><a href="#none"><img src="/img/icon/icon-mypage.svg" alt="내정보 아이콘" data-origin="/img/icon/icon-mypage.svg" data-img="/img/icon/icon-hover-mypage.svg"></a></li>
                     <li><a class="search-btn" href="#"><img class="search-icon" src="/img/icon/icon-search.svg" alt="검색 아이콘"></a></li>
                 </ul>
                 <div class="header-bg"></div>
@@ -84,9 +78,9 @@
                         <button type="submit" class="i-search"></button>
                     </form>
                     <ul class="favor-list">
-                        <li><a href="#">#삼릉숲</a></li>
-                        <li><a href="#">#등불축제</a></li>
-                        <li><a href="#">#문화유산</a></li>
+                        <li><a href="#none">#삼릉숲</a></li>
+                        <li><a href="#none">#등불축제</a></li>
+                        <li><a href="#none">#문화유산</a></li>
                     </ul>
                 </div>
 

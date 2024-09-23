@@ -1,20 +1,20 @@
 <?php include_once("../layout/header.html"); ?>
 <main id="faq-page">
     <article class="container mt-5 p-80 g-60">
-        <h2><strong>자주하는질문</strong></h2>
+        <h2>자주하는질문</h2>
         <ul class="nav nav-tabs" id="myTab" role="tablist">
             <li class="nav-item col-4" role="presentation">
-                <a class="nav-link active" id="ing-tab" data-bs-toggle="tab" href="#member" role="tab" aria-controls="member" aria-selected="true">회원</a>
+                <a class="nav-link active" id="member-tab" data-bs-toggle="tab" href="#member" role="tab" aria-controls="member" aria-selected="true">회원</a>
             </li>
             <li class="nav-item col-4" role="presentation">
-                <a class="nav-link" id="end-tab" data-bs-toggle="tab" href="#info" role="tab" aria-controls="info" aria-selected="false">축제 정보</a>
+                <a class="nav-link" id="info-tab" data-bs-toggle="tab" href="#info" role="tab" aria-controls="info" aria-selected="false">축제 정보</a>
             </li>
             <li class="nav-item col-4" role="presentation">
-                <a class="nav-link" id="winner-tab" data-bs-toggle="tab" href="#register" role="tab" aria-controls="register" aria-selected="false">축제 등록</a>
+                <a class="nav-link" id="register-tab" data-bs-toggle="tab" href="#register" role="tab" aria-controls="register" aria-selected="false">축제 등록</a>
             </li>
         </ul>
         <div class="tab-content" id="myTabContent">
-            <div class="tab-pane fade show active" id="member" role="tabpanel" aria-labelledby="ing-tab">
+            <div class="tab-pane fade show active" id="member" role="tabpanel" aria-labelledby="member-tab"> 
                 <dl>
                     <dt tabindex="0"><span>[회원]</span>아이디/패스워드를 모르겠어요</dt>
                     <dd>로그인이 실패했다는 메시지가 나온다면 아이디나 패스워드가 틀린 것입니다. <br>
@@ -42,7 +42,7 @@
                     </dd>
                 </dl>
             </div>
-            <div class="tab-pane fade" id="info" role="tabpanel" aria-labelledby="end-tab">
+            <div class="tab-pane fade" id="info" role="tabpanel" aria-labelledby="info-tab">
                 <dl>
                     <dt tabindex="0"><span>[축제 이용]</span>축제 운영 여부를 알고 싶어요</dt>
                     <dd>날씨 등으로 인한 축제의 실운영 여부, 주차 가능 여부, 티켓 구매 방법과 같은 세부 정보는 해당 축제의 문의처로 직접 연락하여 확인하실 수 있습니다.</dd>
@@ -57,7 +57,7 @@
                 </dl>
 
             </div>
-            <div class="tab-pane fade" id="register" role="tabpanel" aria-labelledby="winner-tab">
+            <div class="tab-pane fade" id="register" role="tabpanel" aria-labelledby="register-tab">
                 <dl>
                     <dt tabindex="0"><span>[축제 등록]</span>축제 분류를 변경하고 싶어요</dt>
                     <dd>분류 변경은 내부 운영 가이드에 따라 결정되므로, 변경을 원하시는 경우 관련 내용을 전달해주시면 검토 후 회신 드리겠습니다.<br>
