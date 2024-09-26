@@ -1,20 +1,16 @@
 <?php include_once("./layout/header.html"); ?>
+
     <main id="main">
-        <!-- 메인 배너 -->
         <section id="main-banner">
-            <div class="title-wrap">
-                <div class="title-box">
-                    <h2>다양한 <strong>축제</strong><br>
-                    <strong>무한한</strong> 즐거움!</h2>
-                    <p>지금 바로 탐험해보세요!</p>
-                </div>
-                <div class="title-search">
-                    <form action="" id="tit-search">
-                        <input type="text" placeholder="찾고 싶은 축제를 여기에 검색해보세요.">
-                        <button class="i-search" type="submit"></button>
-                    </form>
-                </div>
-            </div>
+            <article class="banner-title text-center d-flex flex-column align-items-center gap-3">
+                <h2 class="mb-2 main-title">다양한<strong> 축제</strong><br>
+                <strong>무한한</strong> 즐거움!</h2>
+                <p class="sub-title">지금 바로 탐험해보세요!</p>
+                <form class="banner-search rounded-pill d-flex justify-content-between align-items-center gap-3 mx-auto my-0">
+                    <input class="border-0 p-3 rounded-pill" type="text" placeholder="찾고 싶은 축제를 여기에 검색해보세요.">
+                    <button class="i-search rounded-circle border-0 m-2" type="submit"></button>
+                </form>
+            </article>
 
             <div id="main-banner-swiper" class="swiper mySwiper">
                 <div class="swiper-wrapper">
@@ -22,93 +18,87 @@
                     <div class="swiper-slide"><img src="/img/main-banner/m-slide-02.jpg" alt="대구 풍등축제"></div>
                     <div class="swiper-slide"><img src="/img/main-banner/m-slide-03.jpg" alt="부산 불꽃축제"></div>
                 </div>
-                <div class="swiper-pagination main-banner-swiper-pagination"></div>
             </div>
-
-            
         </section>
 
-        <!-- 맞춤형 축제 -->
-        <section id="customize" class="container">
-            <div class="banner-title">
-                <h2>요즘 축제, <strong>여기 어때?</strong></h2>
-                <p>내가 선택한 관심분야에 따른 맞춤형 축제를 만나보세요!</p>
-            </div>
-            <div class="custom-content">
+        <section id="customize" class="container py-6">
+            <h2 class="text-center">요즘 축제, <strong>여기 어때?</strong></h2>
+            <p class="text-center mb-6">내가 선택한 관심분야에 따른 <br class="d-sm-none">맞춤형 축제를 만나보세요!</p>
+
+            <div class="custom-content mb-6">
                 <div class="customize-list">
                     <div>
                         <a href="#none">
-                            <span class="fav-btn">
+                            <span class="fav-btn d-none d-lg-flex">
                                 <img src="/img/icon/icon-favorite.svg" alt="비어있는 좋아요" class="default-icon">
                                 <img src="/img/icon/icon-favorite-fill.svg" alt="색이 채워진 좋아요" class="filled-icon" style="display: none;">
                             </span>                            
-                            <span class="more"></span>
+                            <span class="more d-none d-lg-block"></span>
                             <img src="/img/customize/c-img-01.jpg" alt="2024 섬 겨울꽃 축제">
                         </a>
                     </div>
                     <div>
                         <a href="#none">
-                            <span class="fav-btn">
+                            <span class="fav-btn d-none d-lg-flex">
                                 <img src="/img/icon/icon-favorite.svg" alt="비어있는 좋아요" class="default-icon">
                                 <img src="/img/icon/icon-favorite-fill.svg" alt="색이 채워진 좋아요" class="filled-icon" style="display: none;">
                             </span>                            
-                            <span class="more"></span>
+                            <span class="more d-none d-lg-block"></span>
                             <img src="/img/customize/c-img-02.jpg" alt="겨울엔 양평 축제">
                         </a>
                     </div>
                     <div>
                         <a href="#none">
-                            <span class="fav-btn">
+                            <span class="fav-btn d-none d-lg-flex">
                                 <img src="/img/icon/icon-favorite.svg" alt="비어있는 좋아요" class="default-icon">
                                 <img src="/img/icon/icon-favorite-fill.svg" alt="색이 채워진 좋아요" class="filled-icon" style="display: none;">
                             </span>                            
-                            <span class="more"></span>
+                            <span class="more d-none d-lg-block"></span>
                             <img src="/img/customize/c-img-03.jpg" alt="지리산바래봉 겨울축제">
                         </a>
                     </div>
                     <div>
                         <a href="#none">
-                            <span class="fav-btn">
+                            <span class="fav-btn d-none d-lg-flex">
                                 <img src="/img/icon/icon-favorite.svg" alt="비어있는 좋아요" class="default-icon">
                                 <img src="/img/icon/icon-favorite-fill.svg" alt="색이 채워진 좋아요" class="filled-icon" style="display: none;">
                             </span>                            
-                            <span class="more"></span>
+                            <span class="more d-none d-lg-block"></span>
                             <img src="/img/customize/c-img-04.jpg" alt="백운계곡 동장군 축제">
                         </a>
                     </div>
                     <div>
                         <a href="#none">
-                            <span class="fav-btn">
+                            <span class="fav-btn d-none d-lg-flex">
                                 <img src="/img/icon/icon-favorite.svg" alt="비어있는 좋아요" class="default-icon">
                                 <img src="/img/icon/icon-favorite-fill.svg" alt="색이 채워진 좋아요" class="filled-icon" style="display: none;">
                             </span>                            
-                            <span class="more"></span>
+                            <span class="more d-none d-lg-block"></span>
                             <img src="/img/customize/c-img-05.jpg" alt="화천 산천어축제">
                         </a>
                     </div>
                 </div>
-                <div class="prev-arr move-btn"></div>
-                <div class="next-arr move-btn"></div>    
+                <div class="prev-arr move-btn d-none d-lg-block"></div>
+                <div class="next-arr move-btn d-none d-lg-block"></div>    
             </div>
-            <div class="customize-text">
-                <ul>
+            <div class="customize-text mb-6 d-flex">
+                <ul class="d-flex flex-column justify-content-center align-content-center gap-2">
                     <li class="festi-name"><storg>#</storg></li>
                     <li class="festi-address"></li>
                     <li class="festi-date"></li>
                     </ul>
                 <p class="festi-detail"></p>
             </div> 
-            <a href="#none" class="more-btn">더 보러 가기</a>
+            <a href="#none" class="more-btn rounded-pill d-flex justify-content-center align-items-center mx-auto my-0">더 보러 가기</a>
+
         </section>
 
-        <!-- 이벤트 -->
-        <section id="event">
-            <div class="banner-title">
-                <h2><strong>EVENT</strong></h2>
-                <p>흥미진진한 이벤트, 놓치지 마세요!</p>
-            </div>
+        <section id="event" class="py-6">
+            <h2 class="text-center"><strong>EVENT</strong></h2>
+            <p class="text-center mb-6">흥미진진한 이벤트, 놓치지 마세요!</p>
+
             <div id="event-swiper" class="swiper mySwiper container">
-                <div class="swiper-wrapper">
+                <div class="swiper-wrapper d-flex">
                     <div class="swiper-slide">
                         <a href="#none"><img class="ev-01" src="/img/event/e-img-01.jpg" alt="해시태그 이벤트"></a>
                         <ul><li><a href="#none"><strong>해시태그 공유 이벤트</strong></a></li><li><a href="#none">2024.11.01~2024.11.30</a></li></ul>
@@ -137,165 +127,157 @@
             </div>
         </section>
 
-        <!-- 후기 -->
-        <section id="review">
-            <div class="banner-title">
-                <h2><strong>후기</strong></h2>
-                <p>다른 이들이 들려주는 축제의 즐거운 순간들을 확인해보세요.</p>
-            </div>
-            <ul class="review-list container">
-                <li class="col-4">
-                    <a href="#none">
-                        <img class="review-img re-img-1" src="/img/review/r-img-01.jpg" alt="수원화성 이미지">
-                        <span class="review-text">
-                            <span class="tag nanumpen-b">#수원화성 #수원화성문화재 #수원가을축제</span>
-                            <span class="title"><strong>수원화성문화재</strong>2024-10-19</span>
-                            <span class="sub">최근에 수원화성에 다녀왔어요! 조선 시대의 생활상과 문화유산을 직접 보고 체험할 수 있는 기회가 많아서 너무 좋았어요. 전통 복식을 입고, 한지 공예를 배워보는 등 다양한 체험이 가능해서 시간 가는 줄 몰랐어요! 그리고 화성의 아름다움을 만끽할 수 있는 야경 투어는 정말 환상적! 밤하늘에 반짝이는 별들과 함께 조명이 비춘 화성의 모습은 그림처럼 아름다웠어요~ 화성의 성곽을 따라 걷다 보니 역사속으로 시간 여행을 하는 듯한 기분이 들었어요. 다음에도 꼭 다시 방문하고 싶어요!!</span>    
-                        </span>
-                    </a>
-                </li>
-                <li class="col-4">
-                    <a href="#none">
-                        <img class="review-img re-img-2" src="/img/review/r-img-02.jpg" alt="사천에어쇼 이미지">
-                        <span class="review-text">
-                            <span class="tag nanumpen-b">#사천항공축제 #사천에어쇼 #사천비행장</span>
-                            <span class="title"><strong>사천에어쇼</strong>2024-10-25</span>
-                            <span class="sub">사천에어쇼는 정말 환상적인 경험이었습니다! 스릴 넘치는 공중 곡예와 정밀한 비행을 가까이에서 볼 수 있어 감동적이었습니다. 특히, 군용 비행기와 항공기들의 화려한 비행 퍼포먼스는 숨이 멎을 듯한 장관을 선사했습니다. 다양한 비행기와 항공 기술에 대한 전시도 흥미로웠고, 가족과 함께 즐기기에 좋은 행사였습니다. 날씨도 좋고, 안전하게 즐길 수 있는 환경이 잘 조성되어 있어, 올해도 꼭 다시 가고 싶다는 생각이 들었습니다.</span>    
-                        </span>
-                    </a>
-                </li>
-                <li class="col-4">
-                    <a href="#none">
-                        <img class="review-img re-img-3" src="/img/review/r-img-03.jpg" alt="산정호수억새꽃 이미지">
-                        <span class="review-text">
-                            <span class="tag nanumpen-b">#산정호수억새꽃 #억새꽃축제 #가을꽃</span>
-                            <span class="title"><strong>산정호수 억새꽃축제</strong>2024-10-16</span>
-                            <span class="sub">가을의 정취를 만끽할 수 있는 억새밭이 황금빛으로 물들어 환상적인 풍경을 자아냈습니다. 넓게 펼쳐진 억새밭 사이를 걷다 보면, 바람에 흔들리는 억새들이 마치 은빛 물결처럼 반짝였습니다.가을의 향연을 제대로 느낄 수 있는 축제였으며, 내년에도 다시 방문하고 싶다는 생각이 들었습니다.</span>
-                        </span>
-                    </a>
-                </li>
-                <li class="col-4">
-                    <a href="#none">
-                        <img class="review-img re-img-3" src="/img/review/r-img-04.jpg" alt="휴애리수국 이미지">
-                        <span class="review-text">
-                            <span class="tag nanumpen-b">#휴애리수국 #수국축제 #인생사진</span>
-                            <span class="title"><strong>휴애리 유럽 수국축제</strong>2024-09-15</span>
-                            <span class="sub">휴애리 농장에서 펼쳐진 수국밭은 다양한 색상의 수국들이 만개하여 마치 한 폭의 그림 같은 풍경을 선사했습니다. 파란색, 분홍색, 흰색 수국들이 어우러져 환상적인 색감의 조화를 이뤄, 사진 찍기에 좋은 장소였습니다. 휴애리의 청명한 하늘 아래, 수국의 아름다움을 만끽하며 편안한 시간을 보낼 수 있었던 하루였습니다.</span>
-                        </span>
-                    </a>
-                </li>
-                <li class="col-4">
-                    <a href="#none">
-                        <img class="review-img re-img-3" src="/img/review/r-img-05.jpg" alt="위도상사화 이미지">
-                        <span class="review-text">        
-                            <span class="tag nanumpen-b">#위도상사화축제 #고슴도치섬 #하얀상사화</span>
-                            <span class="title"><strong>위도상사화축제</strong>2024-09-03</span>
-                            <span class="sub">하얀 상사화는 일반적인 붉은 상사화와는 다른 차별화된 매력을 지니고 있습니다. 순백의 꽃이 가지런히 피어있는 모습은 신비롭고, 축제 기간 동안에는 이 하얀 상사화가 주는 고요한 아름다움을 만끽할 수 있었습니다. 하얀 상사화 군락이 펼쳐진 풍경은 정말 장관이었습니다. 그리고 위도의 자연경관은 축제의 매력을 한층 더해주었습니다. 섬의 청정한 해변과 풍경 속에서 하얀 상사화를 감상하며 여유로운 시간을 보낼 수 있었고, 산책로를 따라 걷다 보면 상사화가 주는 고요한 아름다움에 푹 빠질 수 있었습니다.</span>
-                        </span>
-                    </a>
-                </li>
-                <li class="col-4">
-                    <a href="#none">
-                        <img class="review-img re-img-3" src="/img/review/r-img-06.jpg" alt="위도상사화 이미지">
-                        <span class="review-text">        
-                            <span class="tag nanumpen-b">#반딧불이탐사 #무주축제 #무주반딧불축제</span>
-                            <span class="title"><strong>무주반딧불축제</strong>2024-10-19</span>
-                            <span class="sub">축제의 하이라이트는 단연 반딧불이의 환상적인 빛입니다. 어두운 밤하늘을 수놓는 반딧불이들의 반짝이는 모습은 마치 꿈속에 들어온 듯한 기분을 줍니다. 청정한 자연 속에서 반딧불이들이 만들어내는 자연의 불빛은 정말 아름답고, 그 순간만큼은 모든 스트레스와 걱정을 잊게 만듭니다.</span>
-                        </span>
-                    </a>
-                </li>
-            </ul>
-            <a href="/sub/review.html" class="more-btn">더 보러 가기</a>
-        </section>
-        
-        <!-- 인기축제순위 -->
-        <section id="winner">
-            <div class="banner-title">
-                <h2><strong>축제러버들의 원픽!</strong></h2>
-                <p>올해 축제러버들의 선택을 받은 가장 사랑받는 축제!</p>
-            </div>
-
-            <div class="winner-list">
-                <div class="first-list">
-                    <a class="img-file" href="#none"><img src="/img/winner/w-img-01.jpg" alt="인제빙어축제"></a>
-                    <div class="img-text">
+        <section id="review" class="py-6">
+            <article class="review-content">
+                <h2 class="text-center"><strong>후기</strong></h2>
+                <p class="text-center mb-6">다른 이들이 들려주는<br class="d-sm-none"> 축제의 즐거운 순간들을 확인해보세요.</p>   
+                <ul class="review-list mb-6 d-flex flex-wrap justify-content-between container">
+                    <li>
                         <a href="#none">
-                            <span class="name">태백산 눈축제</span>
-                            <span class="date">2025.01.26 ~ 2025.02.04</span>
-                            <span class="navi">강원 태백시 소도동 180</span>
+                            <img class="review-img re-img-1" src="/img/review/r-img-01.jpg" alt="수원화성 이미지">
+                            <span class="review-text">
+                                <span class="tag nanumpen-b">#수원화성 <br class="d-xl-none">#수원화성문화재 <br class="d-xl-none">#수원가을축제</span>
+                                <span class="title"><strong>수원화성문화재</strong>2024-10-19</span>
+                                <span class="sub">최근에 수원화성에 다녀왔어요! 조선 시대의 생활상과 문화유산을 직접 보고 체험할 수 있는 기회가 많아서 너무 좋았어요. 전통 복식을 입고, 한지 공예를 배워보는 등 다양한 체험이 가능해서 시간 가는 줄 몰랐어요! 그리고 화성의 아름다움을 만끽할 수 있는 야경 투어는 정말 환상적! 밤하늘에 반짝이는 별들과 함께 조명이 비춘 화성의 모습은 그림처럼 아름다웠어요~ 화성의 성곽을 따라 걷다 보니 역사속으로 시간 여행을 하는 듯한 기분이 들었어요. 다음에도 꼭 다시 방문하고 싶어요!!</span>    
+                            </span>
                         </a>
-                    </div>
-                </div>
-            
-                <ul class="second-list">
-                    <li class="img-01">
-                        <a class="img-file" href="#none"><img src="/img/winner/w-img-01.jpg" alt="지리산피아골 단풍축제"></a>
                     </li>
-                    <li class="img-02">
-                        <a class="img-file" href="#none"><img src="/img/winner/w-img-02.jpg" alt="고흥 유자축제"></a>
+                    <li>
+                        <a href="#none">
+                            <img class="review-img re-img-2" src="/img/review/r-img-02.jpg" alt="사천에어쇼 이미지">
+                            <span class="review-text">
+                                <span class="tag nanumpen-b">#사천항공축제 <br class="d-xl-none">#사천에어쇼 <br class="d-xl-none">#사천비행장</span>
+                                <span class="title"><strong>사천에어쇼</strong>2024-10-25</span>
+                                <span class="sub">사천에어쇼는 정말 환상적인 경험이었습니다! 스릴 넘치는 공중 곡예와 정밀한 비행을 가까이에서 볼 수 있어 감동적이었습니다. 특히, 군용 비행기와 항공기들의 화려한 비행 퍼포먼스는 숨이 멎을 듯한 장관을 선사했습니다. 다양한 비행기와 항공 기술에 대한 전시도 흥미로웠고, 가족과 함께 즐기기에 좋은 행사였습니다. 날씨도 좋고, 안전하게 즐길 수 있는 환경이 잘 조성되어 있어, 올해도 꼭 다시 가고 싶다는 생각이 들었습니다.</span>    
+                            </span>
+                        </a>
                     </li>
-                    <li class="img-03">
-                        <a class="img-file" href="#none"><img src="/img/winner/w-img-03.jpg" alt="창덕궁 달빛기행"></a>
+                    <li>
+                        <a href="#none">
+                            <img class="review-img re-img-3" src="/img/review/r-img-03.jpg" alt="산정호수억새꽃 이미지">
+                            <span class="review-text">
+                                <span class="tag nanumpen-b">#산정호수억새꽃 <br class="d-xl-none">#억새꽃축제 <br class="d-xl-none">#가을꽃</span>
+                                <span class="title"><strong>산정호수 억새꽃축제</strong>2024-10-16</span>
+                                <span class="sub">가을의 정취를 만끽할 수 있는 억새밭이 황금빛으로 물들어 환상적인 풍경을 자아냈습니다. 넓게 펼쳐진 억새밭 사이를 걷다 보면, 바람에 흔들리는 억새들이 마치 은빛 물결처럼 반짝였습니다.가을의 향연을 제대로 느낄 수 있는 축제였으며, 내년에도 다시 방문하고 싶다는 생각이 들었습니다.</span>
+                            </span>
+                        </a>
                     </li>
-                    <li class="img-04">
-                        <a class="img-file" href="#none"><img src="/img/winner/w-img-04.jpg" alt="정약용 문화제"></a>
+                    <li>
+                        <a href="#none">
+                            <img class="review-img re-img-3" src="/img/review/r-img-04.jpg" alt="휴애리수국 이미지">
+                            <span class="review-text">
+                                <span class="tag nanumpen-b">#휴애리수국 <br class="d-xl-none">#수국축제 <br class="d-xl-none">#인생사진</span>
+                                <span class="title"><strong>휴애리 유럽 수국축제</strong>2024-09-15</span>
+                                <span class="sub">휴애리 농장에서 펼쳐진 수국밭은 다양한 색상의 수국들이 만개하여 마치 한 폭의 그림 같은 풍경을 선사했습니다. 파란색, 분홍색, 흰색 수국들이 어우러져 환상적인 색감의 조화를 이뤄, 사진 찍기에 좋은 장소였습니다. 휴애리의 청명한 하늘 아래, 수국의 아름다움을 만끽하며 편안한 시간을 보낼 수 있었던 하루였습니다.</span>
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#none">
+                            <img class="review-img re-img-3" src="/img/review/r-img-05.jpg" alt="위도상사화 이미지">
+                            <span class="review-text">        
+                                <span class="tag nanumpen-b">#위도상사화축제 <br class="d-xl-none">#고슴도치섬 <br class="d-xl-none">#하얀상사화</span>
+                                <span class="title"><strong>위도상사화축제</strong>2024-09-03</span>
+                                <span class="sub">하얀 상사화는 일반적인 붉은 상사화와는 다른 차별화된 매력을 지니고 있습니다. 순백의 꽃이 가지런히 피어있는 모습은 신비롭고, 축제 기간 동안에는 이 하얀 상사화가 주는 고요한 아름다움을 만끽할 수 있었습니다. 하얀 상사화 군락이 펼쳐진 풍경은 정말 장관이었습니다. 그리고 위도의 자연경관은 축제의 매력을 한층 더해주었습니다. 섬의 청정한 해변과 풍경 속에서 하얀 상사화를 감상하며 여유로운 시간을 보낼 수 있었고, 산책로를 따라 걷다 보면 상사화가 주는 고요한 아름다움에 푹 빠질 수 있었습니다.</span>
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#none">
+                            <img class="review-img re-img-3" src="/img/review/r-img-06.jpg" alt="위도상사화 이미지">
+                            <span class="review-text">        
+                                <span class="tag nanumpen-b">#반딧불이탐사 <br class="d-xl-none">#무주축제 <br class="d-xl-none">#무주반딧불축제</span>
+                                <span class="title"><strong>무주반딧불축제</strong>2024-10-19</span>
+                                <span class="sub">축제의 하이라이트는 단연 반딧불이의 환상적인 빛입니다. 어두운 밤하늘을 수놓는 반딧불이들의 반짝이는 모습은 마치 꿈속에 들어온 듯한 기분을 줍니다. 청정한 자연 속에서 반딧불이들이 만들어내는 자연의 불빛은 정말 아름답고, 그 순간만큼은 모든 스트레스와 걱정을 잊게 만듭니다.</span>
+                            </span>
+                        </a>
                     </li>
                 </ul>
-            </div>
+                <a href="/sub/review.html" class="more-btn rounded-pill d-flex justify-content-center align-items-center mx-auto my-0">더 보러 가기</a>  
+            </article>
         </section>
 
-
-        <!-- 공지사항 -->
-        <section id="notice" class="">
-            <div class="banner-title">
-                <h2><strong>FESTIRARY 소식</strong></h2>
-                <p>페스티러리의 다양한 소식을 알려드립니다.</p>
-            </div>
-            <div class="notice-list container">
-                <dl class="notice-box">
-                    <dt class="notice-title"><strong><a href="#none">페스터리리 후기 사진 공모전 안내</a></strong></dt>
-                    <dd class="notice-date"><a href="#none">2024.10.04</a></dd>
-                    <dd class="notice-sub"><a href="#none">2024 페스티러리 후기 사진 공모전 접수가 시작됩니다! 접수기간은 2024년 10월 04일부터 11월 18일 16시까지입니다. 금번 공모 주제는 [축제의 특별한 순간]으로 그 장소, 그 시기, 그 시간에만 볼 수 있는 한국의 아름다운 순간을 담은 작품을 선정할 예정입니다.</a></dd>
-                </dl>
-                <dl class="notice-box">
-                    <dt class="notice-title"><strong><a href="#none">청송사과축제 푸드트럭 운영 모집</a></strong></dt>
-                    <dd class="notice-date"><a href="#none">2024.09.20</a></dd>
-                    <dd class="notice-sub"><a href="#none">청송사과축제에서 푸드트럭 운영 할 분들을 모집합니다. ◆ 모집개요 ○ 운영기간 : 2024. 10. 30 ~ 11. 03 / 5일간 ○ 운영장소 : 경상북도 청송군 청송읍 월막리 ○ 모집규모 : 00개 업체 ○ 참가자격 - 지방자치단체에서 푸드트럭 영업신고권을 소지필수</a></dd>
-                </dl>
-                <dl class="notice-box">
-                    <dt class="notice-title"><strong><a href="#none">축제정보 종합포털 설문조사</a></strong></dt>
-                    <dd class="notice-date"><a href="#none">2024.08.13</a></dd>
-                    <dd class="notice-sub"><a href="#none">페스티러리는 축제 관련 콘텐츠를 종합적으로 제공하기 위해 포털 서비스 및 관리 시스템의 구현 계획을 수립하고 있습니다. 이에 따라, 다음과 같이 설문조사를 진행하고자 하오니 많은 참여 바랍니다. □ 내용 : 체육포털 포함 대국민 웹사이트 요구분석 및 인공지능 서비스 수요조사</a></dd>
-                </dl>
-            </div>
-            <a href="/sub/notice.html" class="more-btn">더 보러 가기</a>
+        <section id="winner" class="py-6">
+            <article class="winner-content">
+                <h2 class="text-center"><strong>축제러버들의 원픽!</strong></h2>
+                <p class="text-center mb-6">올해 축제러버들의 <br class="d-sm-none">선택을 받은 가장 사랑받는 축제!</p>
+                <div class="winner-list mb-6 d-flex flex-column gap-3">
+                    <div class="first-list">
+                        <a class="img-file" href="#none"><img src="/img/winner/w-img-01.jpg" alt="태백산 눈축제"></a>
+                        <div class="img-text d-flex align-items-center">
+                            <a href="#none">
+                                <span class="name">태백산 눈축제</span>
+                                <span class="date">2025.01.26 ~ 2025.02.04</span>
+                                <span class="navi">강원 태백시 소도동 180</span>
+                            </a>
+                        </div>
+                    </div>
+                
+                    <ol class="second-list d-flex justify-content-between gap-3">
+                        <li class="img-01">
+                            <a class="img-file" href="#none"><img src="/img/winner/w-img-01.jpg" alt="태백산 눈축제"></a>
+                        </li>
+                        <li class="img-02">
+                            <a class="img-file" href="#none"><img src="/img/winner/w-img-02.jpg" alt="양주 눈꽃축제"></a>
+                        </li>
+                        <li class="img-03">
+                            <a class="img-file" href="#none"><img src="/img/winner/w-img-03.jpg" alt="제주감귤박람회"></a>
+                        </li>
+                        <li class="img-04">
+                            <a class="img-file" href="#none"><img src="/img/winner/w-img-04.jpg" alt="영양꽁꽁축제"></a>
+                        </li>
+                    </ol>
+                </div>  
+            </article>
         </section>
 
-        <!-- 자주하는질문 -->
-        <section id="faq" class="">
-            <div class="banner-title">
-                <h2><strong>자주하는질문</strong></h2>
-                <p>최근 자주 물으시는 질문에 대한 답변을 모아두었습니다.</p>
-            </div>
-            <ul class="faq-list container">
-                <li class="noto-sans-kr-600"><a href="/sub/faq.html#member">아이디/패스워드를 모르겠어요</a></li>
-                <li class="noto-sans-kr-600"><a href="/sub/faq.html#info">축제 운영 여부를 알고 싶어요</a></li>
-                <li class="noto-sans-kr-600"><a href="/sub/faq.html#register">축제 등록은 얼마나 걸리나요?</a></li>
-                <li class="noto-sans-kr-600"><a href="/sub/faq.html#info">원하는 축제를 찾을 수 없어요</a></li>
-                <li class="noto-sans-kr-600"><a href="/sub/faq.html#info">가고 싶은 축제를 저장하고 싶어요</a></li>
-                <li class="noto-sans-kr-600"><a href="/sub/faq.html#register">축제 분류를 변경하고 싶어요</a></li>
-            </ul>
-
-            <a href="/sub/faq.html" class="more-btn">더 보러 가기</a>
+        <section id="notice" class="py-6">
+            <article class="notice-content container">
+                <h2 class="text-center"><strong>FESTIRARY 소식</strong></h2>
+                <p class="text-center mb-6">페스티러리의 다양한 소식을 알려드립니다.</p>
+                <div class="notice-list mb-6 d-flex justify-content-between gap-3">
+                    <dl class="notice-box">
+                        <dt class="notice-title"><strong><a href="#none">페스터리리 후기 사진 공모전 안내</a></strong></dt>
+                        <dd class="notice-date"><a href="#none">2024.10.04</a></dd>
+                        <dd class="notice-sub"><a href="#none">2024 페스티러리 후기 사진 공모전 접수가 시작됩니다! 접수기간은 2024년 10월 04일부터 11월 18일 16시까지입니다. 금번 공모 주제는 [축제의 특별한 순간]으로 그 장소, 그 시기, 그 시간에만 볼 수 있는 한국의 아름다운 순간을 담은 작품을 선정할 예정입니다.</a></dd>
+                    </dl>
+                    <dl class="notice-box">
+                        <dt class="notice-title"><strong><a href="#none">청송사과축제 푸드트럭 운영 모집</a></strong></dt>
+                        <dd class="notice-date"><a href="#none">2024.09.20</a></dd>
+                        <dd class="notice-sub"><a href="#none">청송사과축제에서 푸드트럭 운영 할 분들을 모집합니다. ◆ 모집개요 ○ 운영기간 : 2024. 10. 30 ~ 11. 03 / 5일간 ○ 운영장소 : 경상북도 청송군 청송읍 월막리 ○ 모집규모 : 00개 업체 ○ 참가자격 - 지방자치단체에서 푸드트럭 영업신고권을 소지필수</a></dd>
+                    </dl>
+                    <dl class="notice-box">
+                        <dt class="notice-title"><strong><a href="#none">축제정보 종합포털 설문조사</a></strong></dt>
+                        <dd class="notice-date"><a href="#none">2024.08.13</a></dd>
+                        <dd class="notice-sub"><a href="#none">페스티러리는 축제 관련 콘텐츠를 종합적으로 제공하기 위해 포털 서비스 및 관리 시스템의 구현 계획을 수립하고 있습니다. 이에 따라, 다음과 같이 설문조사를 진행하고자 하오니 많은 참여 바랍니다. □ 내용 : 체육포털 포함 대국민 웹사이트 요구분석 및 인공지능 서비스 수요조사</a></dd>
+                    </dl>
+                </div>
+                <a href="/sub/notice.html" class="more-btn rounded-pill d-flex justify-content-center align-items-center mx-auto my-0">더 보러 가기</a>
+            </article>
         </section>
 
-        <!-- 후원사 -->
-        <section id="partner">
-            <div class="banner-title">
-                <h2><strong>FESTIRARY와 함께 해주시는 분들</strong></h2>
-                <p>즐거운 축제를 위한 든든한 파트너가 함께 합니다.</p>
-            </div>
-            <div class="swiper-wrap">
+        <section id="faq" class="py-6">
+            <article class="faq-content container">
+                <h2 class="text-center"><strong>자주하는질문</strong></h2>
+                <p class="text-center mb-6">최근 자주 물으시는 질문에 대한<br class="d-sm-none"> 답변을 모아두었습니다.</p>
+                <ul class="faq-list mb-6 d-flex flex-wrap justify-content-between">
+                    <li><a href="/sub/faq.html#member">아이디/패스워드를 모르겠어요</a></li>
+                    <li><a href="/sub/faq.html#info">축제 운영 여부를 알고 싶어요</a></li>
+                    <li><a href="/sub/faq.html#register">축제 등록은 얼마나 걸리나요?</a></li>
+                    <li><a href="/sub/faq.html#info">원하는 축제를 찾을 수 없어요</a></li>
+                    <li><a href="/sub/faq.html#info">가고 싶은 축제를 저장하고 싶어요</a></li>
+                    <li><a href="/sub/faq.html#register">축제 분류를 변경하고 싶어요</a></li>
+                </ul>
+            </article>
+
+            <a href="/sub/faq.html" class="more-btn rounded-pill d-flex justify-content-center align-items-center mx-auto my-0">더 보러 가기</a>
+        </section>
+
+        <section id="partner" class="py-6">
+            <h2 class="text-center"><strong>FESTIRARY와 <br class="d-md-none">함께 해주시는 분들</strong></h2>
+            <p class="text-center mb-6">즐거운 축제를 위한 <br class="d-sm-none">든든한 파트너가 함께 합니다.</p>
+
+            <div class="swiper-wrap d-flex flex-column">
                 <div id="partner-swiper-1" class="swiper mySwiper partner-swiper">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide"><img src="/img/partner/seoul.jpg" alt="서울 로고"></div>
@@ -345,8 +327,9 @@
                 </div>
             </div>
         </section>
+
+
+
     </main>
-    
-    
 
 <?php include_once("./layout/footer.html"); ?>

@@ -7,6 +7,18 @@ $(function(){
             $('#header').removeClass('fix');
         }
     });
+    $(window).on('resize', function() {
+        // 필요에 따라 헤더의 상태를 재조정
+        if ($(window).scrollTop() > 0) {
+            $('#header').addClass('fix');
+        } else {
+            $('#header').removeClass('fix');
+        }
+    });
+
+    $('.nav-btn').on('click', function(){
+        $(this).toggleClass('slideOn');
+    });
 
     // ---util icon hover 변경---
     const hoverImg = [
@@ -117,91 +129,91 @@ $(function(){
         $('.tab-pane').removeClass('show active');
         $('a[href="' + hash + '"]').addClass('active');
         $(hash).addClass('show active');
+    }   
+});
+
+// ---인기축제순위---
+// 축제 데이터
+const festivalData2 = {
+    'img-01': {
+        image: '/img/winner/w-img-01.jpg',
+        alt: '태백산 눈축제',
+        name: '태백산 눈축제',
+        date: '2025.01.26 ~ 2025.02.04',
+        navi: '강원 태백시 소도동 180'
+    },
+    'img-02': {
+        image: '/img/winner/w-img-02.jpg',
+        alt: '양주 눈꽃축제',
+        name: '양주 눈꽃축제',
+        date: '2024.12.29 ~ 2025.02.18',
+        navi: '경기 양주시 장흥면 권율로 594'
+    },
+    'img-03': {
+        image: '/img/winner/w-img-03.jpg',
+        alt: '제주감귤박람회',
+        name: '제주감귤박람회',
+        date: '2024.11.13 ~ 2024.11.19',
+        navi: '제주 서귀포시 납원읍 중산간동로 7413'
+    },
+    'img-04': {
+        image: '/img/winner/w-img-04.jpg',
+        alt: '영양꽁꽁축제',
+        name: '영양꽁꽁축제',
+        date: '2025.01.05 ~ 2025.01.28',
+        navi: '경북 영양군 영양읍 현리 670'
     }
+};
 
-    // ---인기축제순위---
-    // 축제 데이터
-    const festivalData = {
-        'img-01': {
-            image: '/img/winner/w-img-01.jpg',
-            alt: '태백산 눈축제',
-            name: '태백산 눈축제',
-            date: '2025.01.26 ~ 2025.02.04',
-            navi: '강원 태백시 소도동 180'
-        },
-        'img-02': {
-            image: '/img/winner/w-img-02.jpg',
-            alt: '양주 눈꽃축제',
-            name: '양주 눈꽃축제',
-            date: '2024.12.29 ~ 2025.02.18',
-            navi: '경기 양주시 장흥면 권율로 594'
-        },
-        'img-03': {
-            image: '/img/winner/w-img-03.jpg',
-            alt: '제주감귤박람회',
-            name: '제주감귤박람회',
-            date: '2024.11.13 ~ 2024.11.19',
-            navi: '제주 서귀포시 납원읍 중산간동로 7413'
-        },
-        'img-04': {
-            image: '/img/winner/w-img-04.jpg',
-            alt: '영양꽁꽁축제',
-            name: '영양꽁꽁축제',
-            date: '2025.01.05 ~ 2025.01.28',
-            navi: '경북 영양군 영양읍 현리 670'
+
+// 클릭 이벤트 등록
+document.querySelectorAll('.second-list li').forEach(item => {
+    item.addEventListener('click', () => {
+        const className = item.className; // img-01, img-02 등
+        const festival = festivalData2[className];
+
+        if (festival) {
+            // 이미지 변경
+            const mainImage = document.querySelector('.first-list .img-file img');
+            mainImage.src = festival.image;
+            mainImage.alt = festival.alt;
+
+            // 텍스트 업데이트
+            const imgText = document.querySelector('.img-text');
+            imgText.querySelector('.name').textContent = festival.name;
+            imgText.querySelector('.date').textContent = festival.date;
+            imgText.querySelector('.navi').textContent = festival.navi;
         }
-    };
-
-    // 클릭 이벤트 등록
-    document.querySelectorAll('.second-list li').forEach(item => {
-        item.addEventListener('click', () => {
-            const className = item.className; // img-01, img-02 등
-            const festival = festivalData[className];
-
-            if (festival) {
-                // 이미지 변경
-                const mainImage = document.querySelector('.first-list .img-file img');
-                mainImage.src = festival.image;
-                mainImage.alt = festival.alt;
-
-                // 텍스트 업데이트
-                const imgText = document.querySelector('.img-text');
-                imgText.querySelector('.name').textContent = festival.name;
-                imgText.querySelector('.date').textContent = festival.date;
-                imgText.querySelector('.navi').textContent = festival.navi;
-            }
-        });
-    });
-
-
-
-    // ---팝업창---
-    // 검색창 모달
-    document.querySelector('.search-btn').addEventListener('click', function(event) {
-        event.preventDefault(); // 링크 기본 동작 방지
-        const searchBox = document.querySelector('.search-box');
-        const searchModalBg = document.querySelector('.search-modal');
-        const searchIcon = document.querySelector('.search-icon');
-
-        // 검색 박스가 보이지 않으면 나타나게 하고, 그렇지 않으면 숨기기
-        if (searchBox.style.display === 'none' || searchBox.style.display === '') {
-            searchBox.style.display = 'flex';
-            searchModalBg.style.display = 'block';
-            // 아이콘 변경
-            searchIcon.src = '/img/icon/icon-close.svg';  // 변경할 이미지 경로
-        } else {
-            searchBox.style.display = 'none';
-            searchModalBg.style.display = 'none';
-            // 아이콘 원래대로 복구
-            searchIcon.src = '/img/icon/icon-search.svg';
-        }
-    });
-
-    // searchModalBg 클릭 시 동작을 하지 않도록 설정
-    document.querySelector('.search-modal').addEventListener('click', function(event) {
-        // 아무 동작도 하지 않도록 유지
     });
 });
+
+// ---팝업창---
+// 검색창 모달
+document.querySelector('.search-btn').addEventListener('click', function(event) {
+    event.preventDefault(); // 링크 기본 동작 방지
+    const searchBox = document.querySelector('.search-box');
+    const searchModalBg = document.querySelector('.search-modal');
+    const searchIcon = document.querySelector('.search-icon');
+
+    // 검색 박스가 보이지 않으면 나타나게 하고, 그렇지 않으면 숨기기
+    if (searchBox.style.display === 'none' || searchBox.style.display === '') {
+        searchBox.style.display = 'flex';
+        searchModalBg.style.display = 'block';
+        // 아이콘 변경
+        searchIcon.src = '/img/icon/icon-close.svg';  // 변경할 이미지 경로
+    } else {
+        searchBox.style.display = 'none';
+        searchModalBg.style.display = 'none';
+        // 아이콘 원래대로 복구
+        searchIcon.src = '/img/icon/icon-search.svg';
+    }
+});
+
+// searchModalBg 클릭 시 동작을 하지 않도록 설정
+document.querySelector('.search-modal').addEventListener('click', function(event) {
+// 아무 동작도 하지 않도록 유지
+});
+
 
 
 

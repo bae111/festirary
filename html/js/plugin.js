@@ -54,11 +54,68 @@ const festivalData = [
 $('.customize-list').slick({
     dots: false,
     infinite: true,
+    autoplay: true,
     speed: 0,
     slidesToShow: 1,
     variableWidth: true,
     prevArrow: $('.prev-arr'),
     nextArrow: $('.next-arr'),
+    responsive: [
+        {
+            breakpoint: 1200,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                variableWidth: false,
+                speed: 400
+            }
+            },
+        {
+            breakpoint: 1024,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                variableWidth: false,
+                speed: 400
+            }
+            },
+        {
+            breakpoint: 990,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                variableWidth: false,
+                speed: 400
+            }
+            },
+            {
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                variableWidth: false,
+                speed: 400 
+            }
+            },
+            {
+            breakpoint: 576,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                variableWidth: false,
+                speed: 400 
+            }
+        },
+        {
+            breakpoint: 320,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                variableWidth: false,
+                speed: 400 
+            }
+        }
+    ]
 }).on('afterChange', function(event, slick, currentSlide) {
     const festival = festivalData[currentSlide];
 
@@ -104,6 +161,34 @@ var event_swiper = new Swiper("#event-swiper", {
         delay: 1000,
         disableOnInteraction: false,
     },
+    breakpoints: {
+    320: {
+        slidesPerView: 1,
+        spaceBetween: 10,
+    },
+    480: {
+        slidesPerView: 1,
+        spaceBetween: 10,
+    },
+    580: {
+        slidesPerView: 2,
+        spaceBetween: 10,
+    },
+    768: {
+        slidesPerView: 2,
+        spaceBetween: 10,
+    },
+    990: {
+        slidesPerView: 2,
+        spaceBetween: 10,
+        },
+    1280: {
+        slidesPerView: 3,
+        spaceBetween: 20,
+        },
+    
+    },
+    
 });
 // 이벤트 슬라이드 hover 멈춤
 $("#event-swiper").each(function() {
@@ -125,7 +210,7 @@ var partner_swiper_1 = new Swiper("#partner-swiper-1", {
         disableOnInteraction: false,
     },
     breakpoints: {
-        640: {
+        580: {
             slidesPerView: 2,
             spaceBetween: 10,
         },
@@ -133,7 +218,7 @@ var partner_swiper_1 = new Swiper("#partner-swiper-1", {
             slidesPerView: 4,
             spaceBetween: 10,
         },
-        1024: {
+        990: {
             slidesPerView: 6,
             spaceBetween: 10,
         },
@@ -150,7 +235,7 @@ var partner_swiper_2 = new Swiper("#partner-swiper-2", {
         reverseDirection: true,
     },
     breakpoints: {
-        640: {
+        580: {
             slidesPerView: 2,
             spaceBetween: 10,
         },
@@ -158,7 +243,7 @@ var partner_swiper_2 = new Swiper("#partner-swiper-2", {
             slidesPerView: 4,
             spaceBetween: 10,
         },
-        1024: {
+        990: {
             slidesPerView: 6,
             spaceBetween: 10,
         },

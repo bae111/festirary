@@ -1,9 +1,9 @@
 <?php include_once("../layout/header.html"); ?>
-<main id="event-page">
-    <article class="container mt-5 p-80 g-60">
-        <h2>이벤트</h2>
+<main id="event-page" class="sub-page">
+    <article class="container">
+        <h2 class="my-6 text-center">이벤트</h2>
         <!-- Tabs -->
-        <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <ul class="nav nav-tabs mb-6" id="myTab" role="tablist">
             <li class="nav-item col-4" role="presentation">
                 <a class="nav-link active" id="ing-tab" data-bs-toggle="tab" href="#ing" role="tab" aria-controls="ing" aria-selected="true">진행중인 이벤트</a>
             </li>
@@ -17,7 +17,7 @@
 
 
         <!-- Tab Content -->
-        <div class="tab-content" id="myTabContent">
+        <div class="tab-content mb-6" id="myTabContent">
             <div class="tab-pane fade show active" id="ing" role="tabpanel" aria-labelledby="ing-tab">
                 <ul class="list">
                     <li>
@@ -133,7 +133,7 @@
         </div>
 
 
-        <nav class="page-btn" aria-label="Page navigation example">
+        <nav class="page-btn mb-6" aria-label="Page navigation example">
             <ul class="pagination justify-content-center">
                 <li class="page-item">
                     <a class="page-link-move" href="#none" aria-label="Previous">

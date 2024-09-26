@@ -22,22 +22,90 @@
     <link rel="stylesheet" href="/css/font.css">
     <link rel="stylesheet" href="/css/reset.css">
     <!-- min.scss -->
-    <link rel="stylesheet" href="/scss/common.min.css">
-    <link rel="stylesheet" href="/scss/layout.min.css">
+    <link rel="stylesheet" href="/scss/common.min.css?var=s<?php echo time(); ?>">
+    <link rel="stylesheet" href="/scss/layout.min.css?var=s<?php echo time(); ?>">
     <link rel="stylesheet" href="/scss/main.min.css?var=s<?php echo time(); ?>">
+    <link rel="stylesheet" href="/scss/media.min.css?var=s<?php echo time(); ?>">
+
 </head>
 <body>
-    <div id="wrap">
-        <header id="header">
-            <div class="container">
+    <header id="header" class="d-none d-lg-block">
+        <div class="hd-container d-flex justify-content-between align-items-center mx-auto my-0 px-3">
+            <h1><a href="/"><img src="/img/logo.svg" alt="메인로고 이미지"></a><span class="blind">FESTIRARY</span></h1>
+            <nav class="px-2">
+                <ul class="depth-01 d-flex justify-content-between text-center">
+                    <li class="col">
+                        <a href="/sub/company.html">FESTIRARY</a>
+                    </li>
+                    <li class="col">
+                        <a href="#none">축제정보</a>
+                        <ul class="depth-02">
+                            <li><a href="#none">축제검색</a></li>
+                            <li><a href="/sub/seasonal-food.html">이달의 제철음식</a></li>
+                            <li><a href="/sub/archive.html">축제자료실</a></li>
+                        </ul>
+                    </li>
+                    <li class="col">
+                        <a href="/sub/event.html">이벤트</a>
+                    </li>
+                    <li class="col">
+                        <a href="#none" class="lockMenu">커뮤니티</a>
+                        <ul class="depth-02">
+                            <li><a href="/sub/review.html">후기게시판</a></li>
+                            <li><a href="/sub/free-board.html">자유게시판</a></li>
+                        </ul>
+                    </li>
+                    <li class="col">
+                        <a href="#none" class="lockMenu">고객센터</a>
+                        <ul class="depth-02">
+                            <li><a href="/sub/notice.html">공지사항</a></li>
+                            <li><a href="/sub/ask.html">1:1문의</a></li>
+                            <li><a href="/sub/faq.html">자주하는질문</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <ul class="util-list d-flex justify-content-center align-items-center gap-4 px-3">
+                <li><a href="#none"><img src="/img/icon/icon-login.svg" alt="로그인 아이콘" data-origin="/img/icon/icon-login.svg" data-img="/img/icon/icon-hover-login.svg"></a></li>
+                <li><a href="#none"><img src="/img/icon/icon-join.svg" alt="회원가입 아이콘" data-origin="/img/icon/icon-join.svg" data-img="/img/icon/icon-hover-join.svg"></a></li>
+                <li><a href="#none"><img src="/img/icon/icon-mypage.svg" alt="내정보 아이콘" data-origin="/img/icon/icon-mypage.svg" data-img="/img/icon/icon-hover-mypage.svg"></a></li>
+                <li><a class="search-btn" href="#"><img class="search-icon" src="/img/icon/icon-search.svg" alt="검색 아이콘"></a></li>
+            </ul>
+            <div class="header-bg"></div>
+            <div class="search-box flex-column align-items-center p-5 gap-4">
+                <form class="search-content d-flex justify-content-between rounded-pill">
+                    <input type="text" id="search-input" class="border-0">
+                    <button type="submit" class="i-search rounded-circle border-0 m-1"></button>
+                </form>
+                <ul class="favor-list d-flex justify-content-start gap-2">
+                    <li><a href="#none">#삼릉숲</a></li>
+                    <li><a href="#none">#등불축제</a></li>
+                    <li><a href="#none">#문화유산</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <section id="m-header" class="d-lg-none d-flex justify-content-between align-items-center">
+        <div class="m-container">
+            <div class="m-header-list d-flex align-items-center justify-content-between gap-4 py-3">
+                <span class="ios-back"></span>
                 <h1><a href="/"><img src="/img/logo.svg" alt="메인로고 이미지"></a><span class="blind">FESTIRARY</span></h1>
-                <nav>
+                <button class="nav-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <nav class="menu-list">
+                    <ul class="util-list d-flex justify-content-center align-items-center py-4">
+                        <li><a class="icon-login" href="#none"><img src="/img/icon/icon-login.svg" alt="로그인 아이콘" data-origin="/img/icon/icon-login.svg" data-img="/img/icon/icon-hover-login.svg"><span>로그인</span></a></li>
+                        <li><a class="icon-mypage" href="#none"><img src="/img/icon/icon-mypage.svg" alt="내정보 아이콘" data-origin="/img/icon/icon-mypage.svg" data-img="/img/icon/icon-hover-mypage.svg"><span>내정보</span></a></li>
+                    </ul>    
                     <ul class="depth-01">
                         <li>
-                            <a href="/sub/company.html" class="noto-sans-kr-600">FESTIRARY</a>
+                            <a href="/sub/company.html">FESTIRARY</a>
                         </li>
                         <li>
-                            <a href="#none" class="noto-sans-kr-600 lockMenu">축제정보</a>
+                            <a href="#none">축제정보</a>
                             <ul class="depth-02">
                                 <li><a href="#none">축제검색</a></li>
                                 <li><a href="/sub/seasonal-food.html">이달의 제철음식</a></li>
@@ -45,17 +113,17 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="/sub/event.html" class="noto-sans-kr-600">이벤트</a>
+                            <a href="/sub/event.html">이벤트</a>
                         </li>
                         <li>
-                            <a href="#none" class="noto-sans-kr-600 lockMenu">커뮤니티</a>
+                            <a href="#none" class="lockMenu">커뮤니티</a>
                             <ul class="depth-02">
                                 <li><a href="/sub/review.html">후기게시판</a></li>
                                 <li><a href="/sub/free-board.html">자유게시판</a></li>
                             </ul>
                         </li>
                         <li>
-                            <a href="#none" class="noto-sans-kr-600 lockMenu">고객센터</a>
+                            <a href="#none" class="lockMenu">고객센터</a>
                             <ul class="depth-02">
                                 <li><a href="/sub/notice.html">공지사항</a></li>
                                 <li><a href="/sub/ask.html">1:1문의</a></li>
@@ -63,28 +131,8 @@
                             </ul>
                         </li>
                     </ul>
-                </nav>
-                <ul class="util-list">
-                    <li><a href="#none"><img src="/img/icon/icon-login.svg" alt="로그인 아이콘" data-origin="/img/icon/icon-login.svg" data-img="/img/icon/icon-hover-login.svg"></a></li>
-                    <li><a href="#none"><img src="/img/icon/icon-join.svg" alt="회원가입 아이콘" data-origin="/img/icon/icon-join.svg" data-img="/img/icon/icon-hover-join.svg"></a></li>
-                    <li><a href="#none"><img src="/img/icon/icon-mypage.svg" alt="내정보 아이콘" data-origin="/img/icon/icon-mypage.svg" data-img="/img/icon/icon-hover-mypage.svg"></a></li>
-                    <li><a class="search-btn" href="#"><img class="search-icon" src="/img/icon/icon-search.svg" alt="검색 아이콘"></a></li>
-                </ul>
-                <div class="header-bg"></div>
-                
-                <div class="search-box">
-                    <form class="search-content">
-                        <input type="text" id="search-input">
-                        <button type="submit" class="i-search"></button>
-                    </form>
-                    <ul class="favor-list">
-                        <li><a href="#none">#삼릉숲</a></li>
-                        <li><a href="#none">#등불축제</a></li>
-                        <li><a href="#none">#문화유산</a></li>
-                    </ul>
-                </div>
-
+                </nav>    
             </div>
-        </header>
-        <div class="search-modal"></div> 
-        
+        </div>
+    </section>
+    <div class="search-modal"></div>
