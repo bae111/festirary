@@ -54,7 +54,7 @@ const festivalData = [
 $('.customize-list').slick({
     dots: false,
     infinite: true,
-    autoplay: true,
+    // autoplay: true,
     speed: 0,
     slidesToShow: 1,
     variableWidth: true,
@@ -64,21 +64,12 @@ $('.customize-list').slick({
         {
             breakpoint: 1200,
             settings: {
-                slidesToShow: 1,
+                slidesToShow: 2,
                 slidesToScroll: 1,
                 variableWidth: false,
                 speed: 400
             }
-            },
-        {
-            breakpoint: 1024,
-            settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                variableWidth: false,
-                speed: 400
-            }
-            },
+        },
         {
             breakpoint: 990,
             settings: {
@@ -86,33 +77,6 @@ $('.customize-list').slick({
                 slidesToScroll: 1,
                 variableWidth: false,
                 speed: 400
-            }
-            },
-            {
-            breakpoint: 768,
-            settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                variableWidth: false,
-                speed: 400 
-            }
-            },
-            {
-            breakpoint: 576,
-            settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                variableWidth: false,
-                speed: 400 
-            }
-        },
-        {
-            breakpoint: 320,
-            settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                variableWidth: false,
-                speed: 400 
             }
         }
     ]
@@ -161,34 +125,24 @@ var event_swiper = new Swiper("#event-swiper", {
         delay: 1000,
         disableOnInteraction: false,
     },
-    breakpoints: {
-    320: {
-        slidesPerView: 1,
-        spaceBetween: 10,
-    },
-    480: {
-        slidesPerView: 1,
-        spaceBetween: 10,
-    },
-    580: {
-        slidesPerView: 2,
-        spaceBetween: 10,
-    },
-    768: {
-        slidesPerView: 2,
-        spaceBetween: 10,
-    },
-    990: {
-        slidesPerView: 2,
-        spaceBetween: 10,
-        },
-    1280: {
-        slidesPerView: 3,
-        spaceBetween: 20,
-        },
-    
-    },
-    
+    // breakpoints: {
+    // 375: {
+    //     slidesPerView: 1,
+    //     spaceBetween: 10,
+    // },
+    // 580: {
+    //     slidesPerView: 2,
+    //     spaceBetween: 20,
+    // },
+    // 990: {
+    //     slidesPerView: 2,
+    //     spaceBetween: 35,
+    //     },
+    // 1200: {
+    //     slidesPerView: 3,
+    //     spaceBetween: 40,
+    //     }
+    // }
 });
 // 이벤트 슬라이드 hover 멈춤
 $("#event-swiper").each(function() {

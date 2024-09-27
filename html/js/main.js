@@ -1,10 +1,15 @@
 $(function(){
     // ---header scroll 내려가면 fix---
+    // ---top-btn 스크롤 내리면 show---
     $(window).on('scroll', function(){
         if($(window).scrollTop() > 0){
             $('#header').addClass('fix');
+            $('#m-header').addClass('fix');
+            $('#top-btn').addClass('show');
         }else{
             $('#header').removeClass('fix');
+            $('#m-header').removeClass('fix');
+            $('#top-btn').removeClass('show');
         }
     });
     $(window).on('resize', function() {
@@ -15,6 +20,8 @@ $(function(){
             $('#header').removeClass('fix');
         }
     });
+
+
 
     $('.nav-btn').on('click', function(){
         $(this).toggleClass('slideOn');
@@ -37,15 +44,6 @@ $(function(){
         $(this).on('mouseleave', function() {
             $(this).attr('src', originalSrc);
         });
-    });
-    
-    // ---top-btn top 가면 none---
-    $(window).on('scroll', function(){
-        if($(window).scrollTop() > 0){
-            $('#top-btn').addClass('show');
-        }else{
-            $('#top-btn').removeClass('show');
-        }
     });
 
     // ---이벤트---
