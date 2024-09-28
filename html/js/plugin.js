@@ -54,22 +54,13 @@ const festivalData = [
 $('.customize-list').slick({
     dots: false,
     infinite: true,
-    // autoplay: true,
+    autoplay: true,
     speed: 0,
     slidesToShow: 1,
     variableWidth: true,
     prevArrow: $('.prev-arr'),
     nextArrow: $('.next-arr'),
     responsive: [
-        {
-            breakpoint: 1200,
-            settings: {
-                slidesToShow: 2,
-                slidesToScroll: 1,
-                variableWidth: false,
-                speed: 400
-            }
-        },
         {
             breakpoint: 990,
             settings: {
@@ -125,24 +116,20 @@ var event_swiper = new Swiper("#event-swiper", {
         delay: 1000,
         disableOnInteraction: false,
     },
-    // breakpoints: {
-    // 375: {
-    //     slidesPerView: 1,
-    //     spaceBetween: 10,
-    // },
-    // 580: {
-    //     slidesPerView: 2,
-    //     spaceBetween: 20,
-    // },
-    // 990: {
-    //     slidesPerView: 2,
-    //     spaceBetween: 35,
-    //     },
-    // 1200: {
-    //     slidesPerView: 3,
-    //     spaceBetween: 40,
-    //     }
-    // }
+    breakpoints: {
+    320: {
+        slidesPerView: 1,
+        spaceBetween: 10,
+    },
+    580: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+    },
+    990: {
+        slidesPerView: 3,
+        spaceBetween: 40,
+        },
+    }
 });
 // 이벤트 슬라이드 hover 멈춤
 $("#event-swiper").each(function() {
