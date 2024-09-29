@@ -1,9 +1,9 @@
 <?php include_once("../layout/header.html"); ?>
 <main id="event-page" class="sub-page">
-    <article class="container">
-        <h2 class="my-6 text-center">이벤트</h2>
+    <article class="container py-section">
+        <h2 class="my-6 text-center mb-content">이벤트</h2>
         <!-- Tabs -->
-        <ul class="nav nav-tabs mb-6" id="myTab" role="tablist">
+        <ul class="nav nav-tabs mb-content" id="myTab" role="tablist">
             <li class="nav-item col-4" role="presentation">
                 <a class="nav-link active" id="ing-tab" data-bs-toggle="tab" href="#ing" role="tab" aria-controls="ing" aria-selected="true">진행중인 이벤트</a>
             </li>
@@ -17,7 +17,7 @@
 
 
         <!-- Tab Content -->
-        <div class="tab-content mb-6" id="myTabContent">
+        <div class="tab-content mb-content" id="myTabContent">
             <div class="tab-pane fade show active" id="ing" role="tabpanel" aria-labelledby="ing-tab">
                 <ul class="list">
                     <li>
@@ -92,12 +92,12 @@
                     </li>
 
             </div>
-            <div class="tab-pane fade" id="winner" role="tabpanel" aria-labelledby="winner-tab">
+            <div class="tab-pane fade mb-content" id="winner" role="tabpanel" aria-labelledby="winner-tab">
                 <ul class="list">
                     <li>
                         <a href="#" class="winner-item">
                             <span class="title">‘FESTIRARY’ 후기 이벤트! 당첨자 발표</span>
-                            <span class="date">2024.09.01 ~ 2024.09.30</span>
+                            <span class="date"><span class="year">2024.</span>09.01 ~ <span class="year">2024.</span>09.30</span>
                         </a>
                         <p class="detail">
                             안녕하세요, ‘FESTIRARY’ 이벤트에 참여해 주신 모든 분들께 감사드립니다!<br>
@@ -114,7 +114,7 @@
                     <li>
                         <a href="#" class="winner-item">
                             <span class="title">문화관광축제 퀴즈 맞추고 다이어리 받자! 당첨자 발표</span>
-                            <span class="date">2024.08.01 ~ 2024.08.30</span>
+                            <span class="date"><span class="year">2024.</span>08.01 ~ <span class="year">2024.</span>08.30</span>
                         </a>
                         <p class="detail">
                             안녕하세요, 문화관광축제 퀴즈에 참여해 주신 모든 분들께 감사드립니다!<br>
@@ -133,7 +133,7 @@
         </div>
 
 
-        <nav class="page-btn mb-6" aria-label="Page navigation example">
+        <nav class="page-btn" aria-label="Page navigation example">
             <ul class="pagination justify-content-center">
                 <li class="page-item">
                     <a class="page-link-move" href="#none" aria-label="Previous">
