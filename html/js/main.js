@@ -176,14 +176,28 @@ document.querySelectorAll('.second-list li').forEach(item => {
             mainImage.src = festival.image;
             mainImage.alt = festival.alt;
 
-            // 텍스트 업데이트
+            // 텍스트 박스 선택
             const imgText = document.querySelector('.img-text');
-            imgText.querySelector('.name').textContent = festival.name;
-            imgText.querySelector('.date').textContent = festival.date;
-            imgText.querySelector('.navi').textContent = festival.navi;
+
+            // 애니메이션 초기화
+            imgText.classList.remove('show'); // 텍스트 박스 숨기기
+
+            // 일정 시간 후에 텍스트 업데이트 및 애니메이션 시작
+            setTimeout(() => {
+            // 텍스트 업데이트
+                imgText.querySelector('.name').textContent = festival.name;
+                imgText.querySelector('.date').textContent = festival.date;
+                imgText.querySelector('.navi').textContent = festival.navi
+            
+                imgText.classList.add('show'); // 텍스트 박스 보이기
+            }, 500); // 500ms 후에 텍스트 업데이트 및 보이기
         }
     });
 });
+
+// 초기 텍스트 박스 보이기
+const imgText = document.querySelector('.img-text');
+imgText.classList.add('show'); // 첫 번째 텍스트 박스 표시
 
 // ---팝업창---
 // 검색창 모달
