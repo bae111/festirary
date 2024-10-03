@@ -208,16 +208,28 @@ document.querySelector('.search-btn').addEventListener('click', function(event) 
     const searchIcon = document.querySelector('.search-icon');
 
     // 검색 박스가 보이지 않으면 나타나게 하고, 그렇지 않으면 숨기기
-    if (searchBox.style.display === 'none' || searchBox.style.display === '') {
-        searchBox.style.display = 'flex';
-        searchModalBg.style.display = 'block';
-        // 아이콘 변경
-        searchIcon.src = '/img/icon/icon-close.svg';  // 변경할 이미지 경로
+    if (!searchBox.classList.contains('active')) {
+        // 검색 박스와 모달을 활성화
+        searchBox.classList.add('active');
+        searchModalBg.classList.add('active');
+        searchIcon.src = '/img/icon/icon-close.svg'; // 변경할 이미지 경로
+        searchBox.style.visibility = 'visible'; // 보이도록 설정
+        searchModalBg.style.visibility = 'visible'; // 모달 배경도 보이도록 설정
     } else {
-        searchBox.style.display = 'none';
-        searchModalBg.style.display = 'none';
-        // 아이콘 원래대로 복구
-        searchIcon.src = '/img/icon/icon-search.svg';
+        // 검색 박스를 숨기고 모달 배경을 숨깁니다.
+        searchBox.classList.remove('active');
+        searchIcon.src = '/img/icon/icon-search.svg'; // 아이콘 원래대로 복구
+        
+
+        // 애니메이션 후에 visibility 변경
+        setTimeout(() => {
+            searchBox.style.visibility = 'hidden'; // 숨김 처리
+        }, 400); // search-box의 opacity transition 시간에 맞춤
+
+        setTimeout(() => {
+            searchModalBg.classList.remove('active'); // 모달 배경 비활성화
+            searchModalBg.style.visibility = 'hidden'; // 모달 배경 숨김 처리
+        }, 100); // search-box의 opacity transition 시간에 맞춤
     }
 });
 
@@ -225,11 +237,6 @@ document.querySelector('.search-btn').addEventListener('click', function(event) 
 document.querySelector('.search-modal').addEventListener('click', function(event) {
 // 아무 동작도 하지 않도록 유지
 });
-
-
-
-
-
 
 
 // main.js는 팝업이나 이런애들 들어감
