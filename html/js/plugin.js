@@ -54,7 +54,7 @@ const festivalData = [
 $('.customize-list').slick({
     dots: false,
     infinite: true,
-    autoplay: true,
+    // autoplay: true,
     speed: 0,
     slidesToShow: 1,
     variableWidth: true,
@@ -112,18 +112,18 @@ var event_swiper = new Swiper("#event-swiper", {
     slidesPerView: 3,
     spaceBetween: 40,
     loop: true,
-    autoplay: {
-        delay: 1000,
-        disableOnInteraction: false,
-    },
+    // autoplay: {
+    //     delay: 1000,
+    //     disableOnInteraction: false,
+    // },
     breakpoints: {
     320: {
         slidesPerView: 1,
-        spaceBetween: 10,
+        spaceBetween: 40,
     },
     580: {
         slidesPerView: 2,
-        spaceBetween: 20,
+        spaceBetween: 35,
     },
     990: {
         slidesPerView: 3,
@@ -132,14 +132,14 @@ var event_swiper = new Swiper("#event-swiper", {
     }
 });
 // 이벤트 슬라이드 hover 멈춤
-$("#event-swiper").each(function() {
-    var swp = this.swiper;
-    $(this).hover(function() {
-        swp.autoplay.stop();
-    }, function() {
-        swp.autoplay.start();
-    });
-});
+// $("#event-swiper").each(function() {
+//     var swp = this.swiper;
+//     $(this).hover(function() {
+//         swp.autoplay.stop();
+//     }, function() {
+//         swp.autoplay.start();
+//     });
+// });
 
 // 후원사 슬라이드
 var partner_swiper_1 = new Swiper("#partner-swiper-1", {
@@ -151,13 +151,17 @@ var partner_swiper_1 = new Swiper("#partner-swiper-1", {
         disableOnInteraction: false,
     },
     breakpoints: {
-        580: {
+        320: {
             slidesPerView: 2,
-            spaceBetween: 10,
+            spaceBetween: 20,
         },
-        768: {
+        480: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+        },
+        580: {
             slidesPerView: 4,
-            spaceBetween: 10,
+            spaceBetween: 20,
         },
         990: {
             slidesPerView: 6,
@@ -176,13 +180,17 @@ var partner_swiper_2 = new Swiper("#partner-swiper-2", {
         reverseDirection: true,
     },
     breakpoints: {
-        580: {
+        320: {
             slidesPerView: 2,
-            spaceBetween: 10,
+            spaceBetween: 20,
         },
-        768: {
+        480: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+        },
+        580: {
             slidesPerView: 4,
-            spaceBetween: 10,
+            spaceBetween: 20,
         },
         990: {
             slidesPerView: 6,
