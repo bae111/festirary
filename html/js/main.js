@@ -127,7 +127,43 @@ $(function(){
         $('.tab-pane').removeClass('show active');
         $('a[href="' + hash + '"]').addClass('active');
         $(hash).addClass('show active');
-    }   
+    }
+
+    // --- 후기, 서브 후기 1번째 텍스트 고정 ---
+    const $items = $('.r-img');
+    const $reviewTexts = $('.review-text');
+    const $subReviewTexts = $('.sub');
+
+    // 기본적으로 첫 번째 항목의 설명을 active로 설정
+    $reviewTexts.eq(0).addClass('active').css('bottom', '100%');
+    $subReviewTexts.eq(0).addClass('active').css('bottom', '-10px');
+
+    $items.each(function() {
+        const $item = $(this);
+        const $itemText = $item.find('.review-text');
+        const $subItemText = $item.find('.sub');
+
+        $item.on('mouseenter', function() {
+            // 모든 설명 숨기기
+            $reviewTexts.removeClass('active').css('bottom', '-300%');
+            $subReviewTexts.removeClass('active').css('bottom', '-200px');
+
+            // 현재 항목의 설명 표시
+            $itemText.addClass('active').css('bottom', '100%'); 
+            $subItemText.addClass('active').css('bottom', '-10px'); 
+        });
+
+        $item.on('mouseleave', function() {
+            // 모든 설명 숨기기
+            $reviewTexts.removeClass('active').css('bottom', '-300%'); 
+            $subReviewTexts.removeClass('active').css('bottom', '-200px');
+
+            // 첫 번째 항목의 설명 다시 표시
+            $reviewTexts.eq(0).addClass('active').css('bottom', '100%');
+            $subReviewTexts.eq(0).addClass('active').css('bottom', '-10px');
+        });
+    });
+
 });
 
 // ---인기축제순위---
@@ -237,6 +273,48 @@ document.querySelector('.search-btn').addEventListener('click', function(event) 
 document.querySelector('.search-modal').addEventListener('click', function(event) {
 // 아무 동작도 하지 않도록 유지
 });
+
+// 후기
+// document.addEventListener('DOMContentLoaded', () => {
+//     const items = document.querySelectorAll('.r-img');
+//     const reviewTexts = document.querySelectorAll('.review-text');
+
+//     // 기본적으로 첫 번째 항목의 설명을 active로 설정
+//     reviewTexts[0].classList.add('active');
+//     reviewTexts[0].style.bottom = '100%';
+
+//     items.forEach(item => {
+//         item.addEventListener('mouseenter', () => {
+//             // 모든 설명에서 active 클래스 제거
+//             reviewTexts.forEach(text => {
+//                 text.classList.remove('active');
+//                 text.style.bottom = '-300%'; // 설명 숨기기
+//             });
+
+//             // 현재 마우스가 있는 항목의 설명에 active 클래스 추가
+//             const selectedText = item.querySelector('.review-text');
+//             selectedText.classList.add('active');
+//             selectedText.style.bottom = '100%'; // 설명 표시
+//         });
+
+//         item.addEventListener('mouseleave', () => {
+//             // 마우스가 빠져나오면 기본 설명으로 되돌리기
+//             reviewTexts.forEach(text => {
+//                 text.classList.remove('active');
+//                 text.style.bottom = '-300%'; // 설명 숨기기
+//             });
+
+//             // 첫 번째 항목의 설명 다시 표시
+//             reviewTexts[0].classList.add('active');
+//             reviewTexts[0].style.bottom = '100%';
+//         });
+//     });
+// });
+
+
+
+
+
 
 
 // main.js는 팝업이나 이런애들 들어감
