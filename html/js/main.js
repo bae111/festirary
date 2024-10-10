@@ -229,87 +229,51 @@ document.querySelectorAll('.second-list li').forEach(item => {
             }, 500); // 500ms 후에 텍스트 업데이트 및 보이기
         }
     });
+    // 초기 텍스트 박스 보이기
+    const imgText = document.querySelector('.img-text');
+    imgText.classList.add('show'); // 첫 번째 텍스트 박스 표시
 });
-
-// 초기 텍스트 박스 보이기
-const imgText = document.querySelector('.img-text');
-imgText.classList.add('show'); // 첫 번째 텍스트 박스 표시
 
 // ---팝업창---
 // 검색창 모달
-document.querySelector('.search-btn').addEventListener('click', function(event) {
-    event.preventDefault(); // 링크 기본 동작 방지
-    const searchBox = document.querySelector('.search-box');
-    const searchModalBg = document.querySelector('.search-modal');
-    const searchIcon = document.querySelector('.search-icon');
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelector('.search-btn').addEventListener('click', function() {
+        const searchModal = document.querySelector('.search-box');
+        const searchModalBg = document.querySelector('.search-modal');
+        const searchIcon = document.querySelector('.search-icon');
 
-    // 검색 박스가 보이지 않으면 나타나게 하고, 그렇지 않으면 숨기기
-    if (!searchBox.classList.contains('active')) {
-        // 검색 박스와 모달을 활성화
-        searchBox.classList.add('active');
-        searchModalBg.classList.add('active');
-        searchIcon.src = '/img/icon/icon-close.svg'; // 변경할 이미지 경로
-        searchBox.style.visibility = 'visible'; // 보이도록 설정
-        searchModalBg.style.visibility = 'visible'; // 모달 배경도 보이도록 설정
-    } else {
-        // 검색 박스를 숨기고 모달 배경을 숨깁니다.
-        searchBox.classList.remove('active');
-        searchIcon.src = '/img/icon/icon-search.svg'; // 아이콘 원래대로 복구
-        
-
-        // 애니메이션 후에 visibility 변경
-        setTimeout(() => {
-            searchBox.style.visibility = 'hidden'; // 숨김 처리
-        }, 400); // search-box의 opacity transition 시간에 맞춤
-
-        setTimeout(() => {
-            searchModalBg.classList.remove('active'); // 모달 배경 비활성화
-            searchModalBg.style.visibility = 'hidden'; // 모달 배경 숨김 처리
-        }, 100); // search-box의 opacity transition 시간에 맞춤
-    }
+        if (searchModal.classList.contains('active')) {
+            // 팝업을 닫는 코드
+            searchModal.style.opacity = '0';
+            searchModal.style.transform = 'translateY(-2rem)';
+            searchModalBg.style.opacity = '0'; // 배경 숨김
+            searchIcon.src = '/img/icon/icon-search.svg'; // 검색 아이콘으로 변경
+            setTimeout(() => {
+                searchModal.classList.remove('active');
+                searchModalBg.classList.remove('active');
+                searchModal.style.visibility = 'hidden'; // 팝업 숨김
+                searchModalBg.style.visibility = 'hidden'; // 배경 숨김
+            }, 600);
+        } else {
+            // 팝업을 여는 코드
+            searchModal.style.visibility = 'visible'; // 팝업 표시
+            searchModalBg.style.visibility = 'visible'; // 배경 표시
+            searchModal.classList.add('active');
+            searchModalBg.classList.add('active');
+            searchIcon.src = '/img/icon/icon-close.svg'; // 닫기 아이콘으로 변경
+            setTimeout(() => {
+                searchModal.style.opacity = '1';
+                searchModal.style.transform = 'translateY(0)';
+                searchModalBg.style.opacity = '1'; // 배경 표시
+            }, 10);
+        }
+    });
 });
 
 // searchModalBg 클릭 시 동작을 하지 않도록 설정
 document.querySelector('.search-modal').addEventListener('click', function(event) {
 // 아무 동작도 하지 않도록 유지
 });
-
-// 후기
-// document.addEventListener('DOMContentLoaded', () => {
-//     const items = document.querySelectorAll('.r-img');
-//     const reviewTexts = document.querySelectorAll('.review-text');
-
-//     // 기본적으로 첫 번째 항목의 설명을 active로 설정
-//     reviewTexts[0].classList.add('active');
-//     reviewTexts[0].style.bottom = '100%';
-
-//     items.forEach(item => {
-//         item.addEventListener('mouseenter', () => {
-//             // 모든 설명에서 active 클래스 제거
-//             reviewTexts.forEach(text => {
-//                 text.classList.remove('active');
-//                 text.style.bottom = '-300%'; // 설명 숨기기
-//             });
-
-//             // 현재 마우스가 있는 항목의 설명에 active 클래스 추가
-//             const selectedText = item.querySelector('.review-text');
-//             selectedText.classList.add('active');
-//             selectedText.style.bottom = '100%'; // 설명 표시
-//         });
-
-//         item.addEventListener('mouseleave', () => {
-//             // 마우스가 빠져나오면 기본 설명으로 되돌리기
-//             reviewTexts.forEach(text => {
-//                 text.classList.remove('active');
-//                 text.style.bottom = '-300%'; // 설명 숨기기
-//             });
-
-//             // 첫 번째 항목의 설명 다시 표시
-//             reviewTexts[0].classList.add('active');
-//             reviewTexts[0].style.bottom = '100%';
-//         });
-//     });
-// });
 
 
 
