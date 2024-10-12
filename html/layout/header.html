@@ -31,14 +31,14 @@
 <body>
     <header id="header" class="d-none d-lg-block">
         <div class="hd-container d-flex justify-content-between align-items-center mx-auto my-0 px-3">
-            <h1><a href="/"><img src="/img/logo.svg" alt="메인로고 이미지"></a><span class="blind">FESTIRARY</span></h1>
+            <h1><a href="/"><img src="/img/logo.svg" alt="FESTIRARY 로고"></a><span class="blind">FESTIRARY</span></h1>
             <nav class="px-2">
                 <ul class="depth-01 d-flex justify-content-between text-center">
                     <li class="col">
                         <a href="/sub/company.html">FESTIRARY</a>
                     </li>
                     <li class="col">
-                        <a href="#none" class="lockMenu">축제정보</a>
+                        <a href="#none">축제정보</a>
                         <ul class="depth-02">
                             <li><a href="#none">축제검색</a></li>
                             <li><a href="/sub/seasonal-food.html">이달의 제철음식</a></li>
@@ -49,14 +49,14 @@
                         <a href="/sub/event.html">이벤트</a>
                     </li>
                     <li class="col">
-                        <a href="#none" class="lockMenu">커뮤니티</a>
+                        <a href="/sub/review.html">커뮤니티</a>
                         <ul class="depth-02">
                             <li><a href="/sub/review.html">후기게시판</a></li>
                             <li><a href="/sub/free-board.html">자유게시판</a></li>
                         </ul>
                     </li>
                     <li class="col">
-                        <a href="#none" class="lockMenu">고객센터</a>
+                        <a href="/sub/notice.html">고객센터</a>
                         <ul class="depth-02">
                             <li><a href="/sub/notice.html">공지사항</a></li>
                             <li><a href="/sub/ask.html">1:1문의</a></li>
@@ -134,5 +134,22 @@
                 </nav>    
             </div>
         </div>
+        <div id="m-search" class="d-lg-none">
+            <form class="m-search-box d-flex justify-content-between align-items-center">
+                <input type="text" class="m-search-text border-0" placeholder="검색어를 입력해 주세요.">
+                <button type="submit" class="m-search-btn border-0"></button>
+            </form>
+        </div>
+        <div id="m-quick-menu" class="d-lg-none">
+            <div class="menu">
+                <ul>
+                    <li><a href="/" class="m-home"><img src="/img/icon/icon-home.svg" alt="홈 바로가기"></a></li>
+                    <li><a href="#none" class="m-search"><img src="/img/icon/icon-search.svg" alt="검색 바로가기"></a></li>
+                    <li><a href="/sub/seasonal-food.html" class="m-seasonfood"><img src="/img/icon/icon-seasonfood.svg" alt="제철음식 바로가기"></a></li>
+                    <li><a href="#none" class="m-mypage"><img src="/img/icon/icon-mypage.svg" alt="내정보 바로가기"></a></li>
+                </ul>
+            </div>
+        </div>
     </section>
+
     <div class="search-modal"></div>

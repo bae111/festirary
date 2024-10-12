@@ -21,10 +21,12 @@ $(function(){
         }
     });
 
-
-
     $('.nav-btn').on('click', function(){
         $(this).toggleClass('slideOn');
+    });
+
+    $('#m-quick-menu .m-search').on('click', function() {
+        $('#m-search').toggleClass('slideOn');
     });
 
     // ---util icon hover 변경---
@@ -274,9 +276,6 @@ document.addEventListener('DOMContentLoaded', function() {
 document.querySelector('.search-modal').addEventListener('click', function(event) {
 // 아무 동작도 하지 않도록 유지
 });
-
-
-
 
 
 
