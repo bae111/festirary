@@ -1,5 +1,49 @@
 <?php include_once("../layout/header.html"); ?>
-    <section>
-        나는 로그인 페이지
-    </section>
+<main id="login-page" class="sub-page">
+    <article class="container py-section">
+        <div class="title">
+            <h2 class="my-6 text-center">페스티러리 홈페이지를<br class="d-none"> 찾아 주셔서 감사합니다.</h2>
+            <img src="/img/logo.svg" alt="FESTIRARY 로고">
+        </div>
+        <div class="login-content mb-content">
+            <form class="login-wrap">
+                <div>
+                    <input type="text" id="id" placeholder="아이디">
+                    <input type="text" id="pw" placeholder="비밀번호">
+                </div>
+                <div class="d-flex login-select-1">
+                    <div class="d-flex id-save">
+                        <input type="checkbox" name="ing-id" id="ing-id" class="check" checked>
+                        <label id="ing-id">로그인 상태 유지</label>
+                        <input type="checkbox" name="save-id" id="save-id" class="check" checked>
+                        <label id="save-id">아이디 저장</label>
+                    </div>
+                    <div class="d-flex login-select-2">
+                        <a href="#none">아이디찾기</a>
+                        <a href="#none">비밀번호찾기</a>
+                    </div>
+                </div>
+                <div class="d-flex login-select-3">
+                    <button>로그인</button>
+                    <button>
+                        <a href="/sub/join.html">회원가입</a></button>
+                </div>
+                <div class="sns-wrap">
+                    <button class="sns-login sns-1">
+                        <img src="/img/sub/login/sns-icon-google.svg">
+                        <span>Google 간편 로그인</span>
+                    </button>
+                    <button class="sns-login sns-3">
+                        <img src="/img/sub/login/sns-icon-naver.svg">
+                        <span>Naver 간편 로그인</span>
+                    </button>
+                    <button class="sns-login sns-2">
+                        <img src="/img/sub/login/sns-icon-kakao.svg">
+                        <span>kakao 간편 로그인</span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </article>
+</main>
 <?php include_once("../layout/footer.html"); ?>

@@ -278,6 +278,273 @@ document.querySelector('.search-modal').addEventListener('click', function(event
 });
 
 
+// 축제검색
+// 새로운 축제 슬라이드
+const listItems = document.querySelectorAll('.new-box ul li');
+
+listItems.forEach(item => {
+    item.addEventListener('mouseenter', () => {
+        // 모든 li에서 active 클래스 제거
+        listItems.forEach(li => li.classList.remove('active'));
+        // 현재 호버된 li에 active 클래스 추가
+        item.classList.add('active');
+    });
+});
+// 축제검색 내용
+function addOptions(selectId, start, end) {
+    const select = document.getElementById(selectId);
+    for (let i = start; i <= end; i++) {
+        select.add(new Option(i, i));
+    }
+}
+
+// 각 선택 박스에 옵션 추가
+addOptions('startYear', 2024, 2030);
+addOptions('endYear', 2024, 2030);
+addOptions('startMonth', 1, 12);
+addOptions('endMonth', 1, 12);
+addOptions('startDay', 1, 31);
+addOptions('endDay', 1, 31);
+
+
+
+const festivalSearchData = {
+    "서울": {
+        "문화": [
+            { name: "서울야외도서관 : 광화문 책마당", image: "/img/sub/select/seoul/seoul-culture-img-01.jpg", dates: ["2024-04-18", "2024-11-10"] },
+            { name: "한강 불빛 공연(드론 라이트 쇼)", image: "/img/sub/select/seoul/seoul-culture-img-02.jpg", dates: ["2024-09-28", "2024-11-02"] },
+            { name: "한강 종이비행기 축제", image: "/img/sub/select/seoul/seoul-culture-img-03.jpg", dates: ["2024-09-28", "2024-09-28"] },
+            { name: "창덕궁 달빛기행", image: "/img/sub/select/seoul/seoul-culture-img-04.jpg", dates: ["2024-09-12", "2024-11-10"] },
+            { name: "밤의 석조전", image: "/img/sub/select/seoul/seoul-culture-img-05.jpg", dates: ["2024-09-24", "2024-11-02"] },
+            { name: "궁중문화축전", image: "/img/sub/select/seoul/seoul-culture-img-06.jpg", dates: ["2024-10-09", "2024-10-13"] },
+        ],
+        "예술": [
+            { name: "위클리 클래식 페스티벌", image: "/img/sub/select/seoul/seoul-art-img-01.jpg", dates: ["2024-03-01", "2024-07-31"] },
+            { name: "아시테지 국제여름축제", image: "/img/sub/select/seoul/seoul-art-img-02.jpg", dates: ["2024-07-18", "2024-07-28"] },
+            { name: "서울청소년연극축제", image: "/img/sub/select/seoul/seoul-art-img-03.jpg", dates: ["2024-07-22", "2024-07-28"] },
+            { name: "누구나 세종썸머페스티벌", image: "/img/sub/select/seoul/seoul-art-img-04.jpg", dates: ["2024-08-28", "2024-09-01"] },
+            { name: "양천 락(樂) 페스티벌", image: "/img/sub/select/seoul/seoul-art-img-05.jpg", dates: ["2024-09-28", "2024-09-28"] },
+
+        ],
+        "전시": [
+            { name: "서울국제정원박람회", image: "/img/sub/select/seoul/seoul-display-img-01.jpg", dates: ["2024-05-16", "2024-10-08"] },
+            { name: "서울국제주류&와인박람회", image: "/img/sub/select/seoul/seoul-display-img-02.jpg", dates: ["2024-07-04", "2024-07-06"] },
+            { name: "서울일러스트레이션페어V.17", image: "/img/sub/select/seoul/seoul-display-img-03.jpg", dates: ["2024-07-04", "2024-07-07"] },
+            { name: "DDP 여름축제 : 디자인 바이브", image: "/img/sub/select/seoul/seoul-display-img-04.jpg", dates: ["2024-08-01", "2024-08-03"] },
+            { name: "크리에이티브X성수", image: "/img/sub/select/seoul/seoul-display-img-05.jpg", dates: ["2024-10-07", "2024-10-13"] },
+
+        ],
+        "음식": [
+            { name: "영등포 관광 세일 페스타", image: "/img/sub/select/seoul/seoul-food-img-01.jpg", dates: ["2024-03-25", "2024-10-31"] },
+            { name: "풍납야시장", image: "/img/sub/select/seoul/seoul-food-img-02.jpg", dates: ["2024-08-23", "2024-11-16"] },
+            { name: "동대문구 맥주축제", image: "/img/sub/select/seoul/seoul-food-img-03.jpg", dates: ["2024-08-30", "2024-08-31"] },
+            { name: "경복궁 생과방", image: "/img/sub/select/seoul/seoul-food-img-04.jpg", dates: ["2024-09-04", "2024-10-31"] },
+            { name: "전남 세계 김밥 페스티벌", image: "/img/sub/select/seoul/seoul-food-img-05.jpg", dates: ["2024-11-01", "2024-11-03"] },
+
+        ],
+        "자연": [
+            { name: "차 없는 잠수교 뚜벅뚜벅축제", image: "/img/sub/select/seoul/seoul-nature-img-01.jpg", dates: ["2024-05-05", "2024-06-23"] },
+            { name: "별 헤는 서울숲", image: "/img/sub/select/seoul/seoul-nature-img-02.jpg", dates: ["2024-08-17", "2024-08-24"] },
+            { name: "한강야경투어", image: "/img/sub/select/seoul/seoul-nature-img-03.jpg", dates: ["2024-09-06", "2024-10-12"] },
+            { name: "공공미술 빛조각축제", image: "/img/sub/select/seoul/seoul-nature-img-04.jpg", dates: ["2024-10-18", "2024-11-17"] },
+
+        ],
+        "전통": [
+            { name: "양화진 근대사 뱃길탐방", image: "/img/sub/select/seoul/seoul-tradition-img-01.jpg", dates: ["2024-04-23", "2024-11-07"] },
+            { name: "세계 민속춤 축제", image: "/img/sub/select/seoul/seoul-tradition-img-02.jpg", dates: ["2024-09-26", "2024-09-26"] },
+            { name: "한가위 한음회", image: "/img/sub/select/seoul/seoul-tradition-img-03.jpg", dates: ["2024-09-14", "2024-09-14"] },
+
+        ],
+        "역사": [
+            { name: "서대문독립축제", image: "/img/sub/select/seoul/seoul-history-img-01.jpg", dates: ["2024-08-13", "2024-08-15"] },
+            { name: "강동선사문화축제", image: "/img/sub/select/seoul/seoul-history-img-02.jpg", dates: ["2024-10-11", "2024-10-13"] },
+            { name: "한양을 찾아온 보부상", image: "/img/sub/select/seoul/seoul-history-img-03.jpg", dates: ["2024-10-15", "2024-10-15"] },
+            { name: "관악강감찬축제", image: "/img/sub/select/seoul/seoul-history-img-04.jpg", dates: ["2024-10-11", "2024-10-13"] },
+
+        ],
+        "종교": [
+            { name: "관악강감찬축제", image: "/img/sub/select/seoul/seoul-religion-img-01.jpg", dates: ["2024-09-27", "2024-10-01"] },
+
+        ],
+    },
+    // 부산과 제주 데이터는 생략했지만 동일한 구조를 유지해야 합니다.
+};
+let displayedFestivals = [];
+let currentDisplayIndex = 0;
+const DISPLAY_LIMIT = 12;
+
+function displayFestivals() {
+    const contentElement = document.getElementById("festi-content");
+    const noFestivalMessage = document.getElementById("noFestivalMessage");
+    contentElement.innerHTML = '';
+
+    if (displayedFestivals.length === 0) {
+        noFestivalMessage.style.display = 'block';
+        document.getElementById("loadMore").style.display = 'none';
+    } else {
+        noFestivalMessage.style.display = 'none';
+        const festivalsToDisplay = displayedFestivals.slice(0, currentDisplayIndex); // 현재까지 표시된 축제만 표시
+        
+        festivalsToDisplay.forEach(festival => {
+            const statusInfo = getFestivalStatus(festival.dates);
+            const listItem = document.createElement('li');
+            listItem.className = 'festival-item';
+            listItem.innerHTML = `
+            <a href="#none">
+                <img src="${festival.image}" alt="${festival.name}">
+                <strong>${festival.name}</strong>
+                <span class="date">${festival.dates.map(date => date.replace(/-/g, '.')).join(' ~ ')}</span>
+                <span class="detail">
+                    <span class="interest">${festival.interest}</span>
+                    <span class="status" style="background-color: ${statusInfo.backgroundColor};">
+                        ${statusInfo.text}
+                    </span>
+                </span>
+            </a>
+            `;
+            contentElement.appendChild(listItem);
+        });
+
+        // 더보기 버튼 표시 여부 결정
+        if (currentDisplayIndex < displayedFestivals.length) {
+            document.getElementById("loadMore").style.display = 'block';
+        } else {
+            document.getElementById("loadMore").style.display = 'none';
+        }
+    }
+}
+
+
+
+function resetDisplay() {
+    displayedFestivals = [];
+    currentDisplayIndex = DISPLAY_LIMIT; // 초기에는 12개를 표시하기 위해 설정
+
+    for (const region in festivalSearchData) {
+        for (const interest in festivalSearchData[region]) {
+            festivalSearchData[region][interest].forEach(festival => {
+                displayedFestivals.push({ ...festival, interest });
+            });
+        }
+    }
+    displayFestivals();
+}
+
+function getFestivalStatus(dates) {
+    const today = new Date();
+    const startDate = new Date(dates[0]);
+    const endDate = new Date(dates[dates.length - 1]);
+
+    if (today < startDate) {
+        return { text: "예정", backgroundColor: "#c4eafc" }; // 예정 상태
+    } else if (today > endDate) {
+        return { text: "종료", backgroundColor: "#ececec" }; // 종료 상태
+    } else {
+        return { text: "진행 중", backgroundColor: "#fedb77" }; // 진행 중 상태
+    }
+}
+
+document.getElementById("submitBtn").addEventListener("click", () => {
+    const region = document.getElementById("regionSelect").value;
+    const startYear = parseInt(document.getElementById("startYear").value) || 2024;
+    const startMonth = parseInt(document.getElementById("startMonth").value) || 1;
+    const startDay = parseInt(document.getElementById("startDay").value) || 1;
+
+    const endYear = parseInt(document.getElementById("endYear").value) || 2030;
+    const endMonth = parseInt(document.getElementById("endMonth").value) || 12;
+    const endDay = parseInt(document.getElementById("endDay").value) || 31;
+
+    const startDate = new Date(startYear, startMonth - 1, startDay);
+    const endDate = new Date(endYear, endMonth - 1, endDay);
+
+    const selectedInterests = Array.from(document.querySelectorAll('.interest-button.selected')).map(button => button.getAttribute('data-interest'));
+
+    displayedFestivals = [];
+    currentDisplayIndex = DISPLAY_LIMIT; // 검색 후 처음 12개 표시
+
+    const addFestivals = (regionData) => {
+        for (const interest in regionData) {
+            regionData[interest].forEach(festival => {
+                festival.dates.forEach(dateString => {
+                    const festivalSearchData = new Date(dateString);
+                    if (festivalSearchData >= startDate && festivalSearchData <= endDate) {
+                        if (selectedInterests.includes("전체") || selectedInterests.includes(interest)) {
+                            if (!displayedFestivals.some(f => f.name === festival.name && f.interest === interest)) {
+                                displayedFestivals.push({ ...festival, interest });
+                            }
+                        }
+                    }
+                });
+            });
+        }
+    };
+
+    if (region === "전국") {
+        for (const r in festivalSearchData) {
+            addFestivals(festivalSearchData[r]);
+        }
+    } else if (region && festivalSearchData[region]) {
+        addFestivals(festivalSearchData[region]);
+    }
+
+    // 관심 분야가 "전체"일 때 모든 축제 추가
+    if (selectedInterests.includes("전체")) {
+        for (const r in festivalSearchData) {
+            addFestivals(festivalSearchData[r]);
+        }
+    }
+
+    displayFestivals();
+});
+
+document.getElementById("resetBtn").addEventListener("click", () => {
+    document.getElementById("regionSelect").value = '';
+    document.getElementById("startYear").value = '';
+    document.getElementById("startMonth").value = '';
+    document.getElementById("startDay").value = '';
+    document.getElementById("endYear").value = '';
+    document.getElementById("endMonth").value = '';
+    document.getElementById("endDay").value = '';
+
+    document.querySelectorAll('.interest-button.selected').forEach(button => {
+        button.classList.remove('selected');
+    });
+
+    resetDisplay();
+});
+
+document.getElementById("loadMore").addEventListener("click", () => {
+    currentDisplayIndex += DISPLAY_LIMIT; // 클릭할 때마다 12개씩 더 추가
+    displayFestivals(); // 축제를 다시 표시
+});
+
+document.querySelectorAll('.interest-button').forEach(button => {
+    button.addEventListener('click', () => {
+        const isSelected = button.classList.toggle('selected');
+        if (button.getAttribute('data-interest') === '전체' && isSelected) {
+            document.querySelectorAll('.interest-button').forEach(b => {
+                if (b !== button) {
+                    b.classList.remove('selected');
+                }
+            });
+        } else if (isSelected && button.getAttribute('data-interest') !== '전체') {
+            const allButton = document.querySelector('.interest-button[data-interest="전체"]');
+            if (allButton.classList.contains('selected')) {
+                allButton.classList.remove('selected');
+            }
+        }
+    });
+});
+
+// 초기 로드 시 모든 축제 표시
+resetDisplay();
+
+
+
+
+
+
+
 
 
 // main.js는 팝업이나 이런애들 들어감

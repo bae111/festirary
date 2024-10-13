@@ -1,0 +1,84 @@
+<?php include_once("../layout/header.html"); ?>
+<main id="search-page" class="sub-page">
+    <article class="container py-section">
+        <h2 class="my-6 text-center mb-content">축제검색</h2>
+        <div class="new-box">
+            <ul>
+                <li class="new active"><a class="new-01" href="#none"><img src="/img/sub/select/s-slide-img-01.jpg" alt="공공미술 빛조각축제"><span>공공미술 빛조각축제</span></a></li>
+                <li class="new"><a class="new-02" href="#none"><img src="/img/sub/select/s-slide-img-02.jpg" alt="창덕궁 달빛기행"><span>창덕궁 달빛기행</span></a></li>
+                <li class="new"><a class="new-03" href="#none"><img src="/img/sub/select/s-slide-img-03.jpg" alt="송현동 솔빛축제"><span>송현동 솔빛축제</span></a></li>
+            </ul>
+        </div>
+        <div class="search-content">
+            <div class="options">
+                <select id="regionSelect">
+                    <option value="">지역을 선택하세요</option>
+                    <option value="전국">전국</option>
+                    <option value="서울">서울</option>
+                    <option value="경기">경기</option>
+                    <option value="인천">인천</option>
+                    <option value="부산">부산</option>
+                    <option value="대구">대구</option>
+                    <option value="광주">광주</option>
+                    <option value="대전">대전</option>
+                    <option value="울산">울산</option>
+                    <option value="세종">세종</option>
+                    <option value="강원">강원</option>
+                    <option value="경남">경남</option>
+                    <option value="경북">경북</option>
+                    <option value="전남">전남</option>
+                    <option value="전북">전북</option>
+                    <option value="충남">충남</option>
+                    <option value="충북">충북</option>
+                    <option value="제주">제주</option>
+                </select>
+
+                <div class="interest-buttons">
+                    <div class="interest-button" data-interest="전체">전체</div>
+                    <div class="interest-button" data-interest="문화">문화</div>
+                    <div class="interest-button" data-interest="예술">예술</div>
+                    <div class="interest-button" data-interest="전시">전시</div>
+                    <div class="interest-button" data-interest="음식">음식</div>
+                    <div class="interest-button" data-interest="자연">자연</div>
+                    <div class="interest-button" data-interest="전통">전통</div>
+                    <div class="interest-button" data-interest="역사">역사</div>
+                    <div class="interest-button" data-interest="종교">종교</div>
+                </div>
+
+                <div class="select-date">
+                    <select id="startYear">
+                        <option value="">연도</option>
+                    </select>
+                    <select id="startMonth">
+                        <option value="">월</option>
+                    </select>
+                    <select id="startDay">
+                        <option value="">일</option>
+                    </select>
+
+                    <span>~</span>
+
+                    <select id="endYear">
+                        <option value="">연도</option>
+                    </select>
+                    <select id="endMonth">
+                        <option value="">월</option>
+                    </select>
+                    <select id="endDay">
+                        <option value="">일</option>
+                    </select>
+                </div>
+
+                <div class="btn-wrap">
+                    <button id="submitBtn">검색</button>
+                    <button id="resetBtn" class="reset-button">초기화</button>
+                </div>
+
+            </div>
+            <ul id="festi-content" class="content"></ul>
+            <div id="noFestivalMessage" class="no-festival">진행 중인 축제가 없습니다.</div>
+            <button id="loadMore">더보기</button>
+        </div>
+    </article>
+</main>
+<?php include_once("../layout/footer.html"); ?>
