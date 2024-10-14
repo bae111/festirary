@@ -25,9 +25,9 @@ $(function(){
         $(this).toggleClass('slideOn');
     });
 
-    $('#m-quick-menu .m-search').on('click', function() {
-        $('#m-search').toggleClass('slideOn');
-    });
+    // $('#m-quick-menu .m-search').on('click', function() {
+    //     $('#m-search').toggleClass('slideOn');
+    // });
 
     // ---util icon hover 변경---
     const hoverImg = [
@@ -165,6 +165,46 @@ $(function(){
             $subReviewTexts.eq(0).addClass('active').css('bottom', '-10px');
         });
     });
+
+    // 회원가입
+    // 체크박스 전체 선택
+    $(".checkbox-group").on("click", "#all-agree", function () {
+        $(this).parents(".checkbox-group").find('input').prop("checked", $(this).is(":checked"));
+    });
+
+    // 체크박스 개별 선택
+    $(".checkbox-group").on("click", ".normal", function () {
+        const is_checked = true;
+
+        $(".checkbox-group .normal").each(function () {
+            is_checked = is_checked && $(this).is(":checked");
+        });
+
+        $("#all-agree").prop("checked", is_checked);
+    });
+        const now = new Date();
+        const year = now.getFullYear();
+        const mon = (now.getMonth() + 1) > 9 ? '' + (now.getMonth() + 1) : '0' + (now.getMonth() + 1);
+        const day = (now.getDate()) > 9 ? '' + (now.getDate()) : '0' + (now.getDate());
+        //년도 selectbox만들기               
+        for (let i = 1900; i <= year; i++) {
+            $('#year').append('<option value="' + i + '">' + i + '</option>');
+        }
+
+        // 월별 selectbox 만들기            
+        for (let i = 1; i <= 12; i++) {
+            let mm = i > 9 ? i : "0" + i;
+            $('#month').append('<option value="' + mm + '">' + mm + '</option>');
+        }
+
+        // 일별 selectbox 만들기
+        for (let i = 1; i <= 31; i++) {
+            let dd = i > 9 ? i : "0" + i;
+            $('#day').append('<option value="' + dd + '">' + dd + '</option>');
+        }
+        $("#year  > option[value=" + year + "]").attr("selected", "true");
+        $("#month  > option[value=" + mon + "]").attr("selected", "true");
+        $("#day  > option[value=" + day + "]").attr("selected", "true");
 
 });
 
@@ -363,7 +403,7 @@ const festivalSearchData = {
 
         ],
         "종교": [
-            { name: "관악강감찬축제", image: "/img/sub/select/seoul/seoul-religion-img-01.jpg", dates: ["2024-09-27", "2024-10-01"] },
+            { name: "국제선명상대회", image: "/img/sub/select/seoul/seoul-religion-img-01.jpg", dates: ["2024-09-27", "2024-10-01"] },
 
         ],
     },
@@ -462,6 +502,13 @@ document.getElementById("submitBtn").addEventListener("click", () => {
     displayedFestivals = [];
     currentDisplayIndex = DISPLAY_LIMIT; // 검색 후 처음 12개 표시
 
+    // 지역과 관심 분야가 둘 다 선택되지 않은 경우
+    if (!region || selectedInterests.length === 0) {
+        displayedFestivals = []; // 축제 목록 초기화
+        displayFestivals();
+        return; // 더 이상 진행하지 않음
+    }
+
     const addFestivals = (regionData) => {
         for (const interest in regionData) {
             regionData[interest].forEach(festival => {
@@ -487,11 +534,9 @@ document.getElementById("submitBtn").addEventListener("click", () => {
         addFestivals(festivalSearchData[region]);
     }
 
-    // 관심 분야가 "전체"일 때 모든 축제 추가
-    if (selectedInterests.includes("전체")) {
-        for (const r in festivalSearchData) {
-            addFestivals(festivalSearchData[r]);
-        }
+    // 선택된 관심 분야가 "전체"일 때 모든 축제 추가
+    if (selectedInterests.includes("전체") && festivalSearchData[region]) {
+        addFestivals(festivalSearchData[region]);
     }
 
     displayFestivals();
