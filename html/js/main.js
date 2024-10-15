@@ -207,6 +207,23 @@ $(function(){
         $("#day  > option[value=" + day + "]").attr("selected", "true");
 
 });
+// 모바일 menu
+document.querySelectorAll('.depth-01 > li > a').forEach(item => {
+    item.addEventListener('click', function(e) {
+        e.preventDefault();
+
+        const parentLi = this.parentElement;
+        const isActive = parentLi.classList.contains('active');
+
+        // 모든 메뉴의 active 클래스 제거
+        document.querySelectorAll('.depth-01 > li').forEach(li => li.classList.remove('active'));
+
+        // 클릭된 메뉴가 비활성 상태였다면 active 클래스 추가
+        if (!isActive) {
+            parentLi.classList.add('active');
+        }
+    });
+});
 
 // ---인기축제순위---
 // 축제 데이터
