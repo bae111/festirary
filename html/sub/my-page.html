@@ -1,0 +1,114 @@
+<?php include_once("../layout/header.html"); ?>
+<main id="my-page" class="sub-page">
+    <article class="container py-section">
+        <h2 class="my-6 text-center mb-content">내정보</h2>
+        <div class="my-page-content">
+            <!-- 탭 메뉴 -->
+            <ul class="nav nav-tabs" id="my-page-Tab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <div class="profile">
+                        <img src="/img/review/r-img-01.jpg" alt="프로필 사진" class="profile-img">
+                        <p class="profile-name">한수지</p>
+                    </div>
+                    <a class="nav-link disabled" id="activity-tab" href="#activity" role="tab" aria-controls="activity" aria-selected="true">내 활동 관리</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link active" id="inquiries-tab" data-bs-toggle="tab" href="#inquiries" role="tab" aria-controls="inquiries" aria-selected="false">나의 문의내역</a>
+                </li>
+
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" id="library-tab" data-bs-toggle="tab" href="#library" role="tab" aria-controls="library" aria-selected="false">나의 라이브러리</a>
+                </li>
+
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" id="account-tab" data-bs-toggle="tab" href="#account" role="tab" aria-controls="account" aria-selected="false">회원 정보 수정</a>
+                </li>
+
+            </ul>
+
+            <!-- 탭 내용 -->
+            <div class="tab-content" id="my-page-Content">
+                <div class="tab-pane fade show active" id="inquiries" role="tabpanel" aria-labelledby="inquiries-tab">
+                    <h2>나의 문의내역</h2>
+                    <p>여기에서 이전에 제출한 문의 내역을 확인할 수 있습니다.</p>
+                    <div class="table-wrap">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>번호</th>
+                                    <th>제목</th>
+                                    <th>작성일</th>
+                                    <th>상태</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="num">1</td>
+                                    <td class="subject"><a href="#" class="ellipsis" title="축제 프로그램에 대한 세부 사항">축제 프로그램에 대한 세부 사항</a></td>
+                                    <td class="date"><span>2024-</span>09-10</td>
+                                    <td class="status-finish">답변완료</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <div class="response mt-4">
+                        <h4>답변 내용</h4>
+                        <p>안녕하세요, 한수지님! <br>
+                        요청하신 축제 프로그램에 대한 세부 사항은 아래와 같습니다 :)<br>
+                        <ul>
+                            <li>날짜: 2024년 10월 5일</li>
+                            <li>장소: 서울 한강 공원</li>
+                            <li>프로그램: 다양한 공연과 체험 부스가 마련될 예정입니다.</li>
+                        </ul>
+                        추가 문의사항이 있으시면 언제든지 연락주세요!</p>
+                    </div>
+                </div>
+
+                <div class="tab-pane fade" id="library" role="tabpanel" aria-labelledby="library-tab">
+                    <h2>나의 라이브러리</h2>
+                    <p>내가 올린 후기글을 확인하세요.</p>
+                    <h2>나의 찜목록</h2>
+                    <p>내가 찜한 목록을 확인하세요.</p>
+                    <h2>관심분야 관리</h2>
+                    <p>여기에서 관심 있는 분야를 추가하거나 삭제할 수 있습니다.</p>
+                </div>
+
+                <div class="tab-pane fade" id="account" role="tabpanel" aria-labelledby="account-tab">
+                    <h2>회원 정보 수정</h2>
+                    <p>여기에서 회원 정보를 업데이트할 수 있습니다.</p>
+                    <form>
+                        <div class="mb-3">
+                            <label for="name-input" class="form-label">이름</label>
+                            <input type="text" class="form-control" id="name-input" value="한수지">
+                        </div>
+                        <button type="submit" class="btn btn-primary">저장</button>
+                    </form>
+
+                    <h2>비밀번호 변경</h2>
+                    <p>새 비밀번호를 설정하세요.</p>
+                    <form>
+                        <div class="mb-3">
+                            <label for="current-password" class="form-label">현재 비밀번호</label>
+                            <input type="password" class="form-control" id="current-password">
+                        </div>
+                        <div class="mb-3">
+                            <label for="new-password" class="form-label">새 비밀번호</label>
+                            <input type="password" class="form-control" id="new-password">
+                        </div>
+                        <div class="mb-3">
+                            <label for="confirm-password" class="form-label">새 비밀번호 확인</label>
+                            <input type="password" class="form-control" id="confirm-password">
+                        </div>
+                        <button type="submit" class="btn btn-success">변경</button>
+                    </form>
+
+                    <h2>회원 탈퇴</h2>
+                    <p>회원 탈퇴를 진행하려면 아래 버튼을 클릭하세요. 이 작업은 복구할 수 없습니다.</p>
+                    <button class="btn btn-danger">회원 탈퇴</button>
+                </div>
+            </div>
+        </div>
+    </article>
+</main>
+<?php include_once("../layout/footer.html"); ?>a
