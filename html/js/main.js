@@ -210,8 +210,7 @@ $(function(){
 // 모바일 menu
 document.querySelectorAll('.depth-01 > li > a').forEach(item => {
     item.addEventListener('click', function(e) {
-        e.preventDefault();
-
+        
         const parentLi = this.parentElement;
         const isActive = parentLi.classList.contains('active');
 
@@ -600,17 +599,3 @@ document.querySelectorAll('.interest-button').forEach(button => {
 
 // 초기 로드 시 모든 축제 표시
 resetDisplay();
-
-
-
-
-
-
-
-
-
-// main.js는 팝업이나 이런애들 들어감
-// 플러그인.js는 따로 만들어야 함
-
-
-

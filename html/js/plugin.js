@@ -1,3 +1,5 @@
+AOS.init();
+
 // 메인배너 슬라이드
 var main_swiper = new Swiper("#main-banner-swiper", {
     slidesPerView: 1,
@@ -54,7 +56,7 @@ const festivalData = [
 $('.customize-list').slick({
     dots: false,
     infinite: true,
-    // autoplay: true,
+    autoplay: true,
     speed: 0,
     slidesToShow: 1,
     variableWidth: true,
@@ -112,10 +114,10 @@ var event_swiper = new Swiper("#event-swiper", {
     slidesPerView: 3,
     spaceBetween: 40,
     loop: true,
-    // autoplay: {
-    //     delay: 1000,
-    //     disableOnInteraction: false,
-    // },
+    autoplay: {
+        delay: 1000,
+        disableOnInteraction: false,
+    },
     breakpoints: {
     320: {
         slidesPerView: 1,
@@ -132,14 +134,14 @@ var event_swiper = new Swiper("#event-swiper", {
     }
 });
 // 이벤트 슬라이드 hover 멈춤
-// $("#event-swiper").each(function() {
-//     var swp = this.swiper;
-//     $(this).hover(function() {
-//         swp.autoplay.stop();
-//     }, function() {
-//         swp.autoplay.start();
-//     });
-// });
+$("#event-swiper").each(function() {
+    var swp = this.swiper;
+    $(this).hover(function() {
+        swp.autoplay.stop();
+    }, function() {
+        swp.autoplay.start();
+    });
+});
 
 // 후원사 슬라이드
 var partner_swiper_1 = new Swiper("#partner-swiper-1", {
