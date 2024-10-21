@@ -25,10 +25,6 @@ $(function(){
         $(this).toggleClass('slideOn');
     });
 
-    // $('#m-quick-menu .m-search').on('click', function() {
-    //     $('#m-search').toggleClass('slideOn');
-    // });
-
     // ---util icon hover 변경---
     const hoverImg = [
         '/img/icon/icon-hover-login.svg',
@@ -210,6 +206,8 @@ $(function(){
 // 모바일 menu
 document.querySelectorAll('.depth-01 > li > a').forEach(item => {
     item.addEventListener('click', function(e) {
+        e.preventDefault(); // 기본 클릭 동작 방지
+        e.stopPropagation(); // 이벤트 전파 방지
         
         const parentLi = this.parentElement;
         const isActive = parentLi.classList.contains('active');

@@ -148,10 +148,10 @@ var partner_swiper_1 = new Swiper("#partner-swiper-1", {
     slidesPerView: 1,
     spaceBetween: 10,
     loop: true,
-    autoplay: {
-        delay: 1000,
-        disableOnInteraction: false,
-    },
+    // autoplay: {
+    //     delay: 1000,
+    //     disableOnInteraction: false,
+    // },
     breakpoints: {
         320: {
             slidesPerView: 2,
@@ -176,11 +176,11 @@ var partner_swiper_2 = new Swiper("#partner-swiper-2", {
     slidesPerView: 1,
     spaceBetween: 10,
     loop: true,
-    autoplay: {
-        delay: 1000,
-        disableOnInteraction: false,
-        reverseDirection: true,
-    },
+    // autoplay: {
+    //     delay: 1000,
+    //     disableOnInteraction: false,
+    //     reverseDirection: true,
+    // },
     breakpoints: {
         320: {
             slidesPerView: 2,
