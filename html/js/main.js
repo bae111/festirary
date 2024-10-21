@@ -25,6 +25,8 @@ $(function(){
         $(this).toggleClass('slideOn');
     });
 
+
+
     // ---util icon hover 변경---
     const hoverImg = [
         '/img/icon/icon-hover-login.svg',
@@ -204,23 +206,52 @@ $(function(){
 
 });
 // 모바일 menu
-document.querySelectorAll('.depth-01 > li > a').forEach(item => {
-    item.addEventListener('click', function(e) {
-        e.preventDefault(); // 기본 클릭 동작 방지
-        e.stopPropagation(); // 이벤트 전파 방지
-        
-        const parentLi = this.parentElement;
-        const isActive = parentLi.classList.contains('active');
-
-        // 모든 메뉴의 active 클래스 제거
-        document.querySelectorAll('.depth-01 > li').forEach(li => li.classList.remove('active'));
-
-        // 클릭된 메뉴가 비활성 상태였다면 active 클래스 추가
-        if (!isActive) {
-            parentLi.classList.add('active');
-        }
+function closeAllSubMenus() {
+    document.querySelectorAll('.depth-02').forEach(subMenu => {
+        subMenu.style.height = '0px'; 
+        subMenu.classList.remove('open'); 
     });
+
+    document.querySelectorAll('.toggle-btn').forEach(btn => {
+        btn.classList.remove('active'); 
+    });
+}
+
+function toggleSubMenu(event) {
+const toggleBtn = event.currentTarget;
+const subMenu = toggleBtn.parentElement.nextElementSibling; 
+
+    if (subMenu && subMenu.classList.contains('depth-02')) {
+        if (subMenu.classList.contains('open')) {
+
+        subMenu.style.height = '0px';
+        subMenu.classList.remove('open');
+        toggleBtn.classList.remove('active'); 
+        } else {
+        
+        closeAllSubMenus();
+
+        
+        subMenu.style.height = `${subMenu.scrollHeight}px`;
+        subMenu.classList.add('open');
+        toggleBtn.classList.add('active'); 
+        }
+
+        event.stopPropagation(); 
+    }
+}
+
+function addMenuToggleEvents() {
+    document.querySelectorAll('.toggle-btn').forEach(btn => {
+        btn.addEventListener('click', toggleSubMenu); 
+    });
+}
+
+document.addEventListener('click', function () {
+    closeAllSubMenus();
 });
+
+addMenuToggleEvents();
 
 // ---인기축제순위---
 // 축제 데이터
