@@ -205,6 +205,17 @@ $(function(){
         $("#day  > option[value=" + day + "]").attr("selected", "true");
 
 });
+
+// 축제검색 내용
+function addOptions(selectId, start, end) {
+    const select = document.getElementById(selectId);
+    for (let i = start; i <= end; i++) {
+        select.add(new Option(i, i));
+    }
+}
+
+
+document.addEventListener('DOMContentLoaded', function() {
 // 모바일 menu
 function closeAllSubMenus() {
     document.querySelectorAll('.depth-02').forEach(subMenu => {
@@ -313,7 +324,7 @@ document.querySelectorAll('.second-list li').forEach(item => {
                 imgText.querySelector('.navi').textContent = festival.navi
             
                 imgText.classList.add('show'); // 텍스트 박스 보이기
-            }, 500); // 500ms 후에 텍스트 업데이트 및 보이기
+            }, 100); // 500ms 후에 텍스트 업데이트 및 보이기
         }
     });
     // 초기 텍스트 박스 보이기
@@ -323,7 +334,7 @@ document.querySelectorAll('.second-list li').forEach(item => {
 
 // ---팝업창---
 // 검색창 모달
-document.addEventListener('DOMContentLoaded', function() {
+
     document.querySelector('.search-btn').addEventListener('click', function() {
         const searchModal = document.querySelector('.search-box');
         const searchModalBg = document.querySelector('.search-modal');
@@ -355,7 +366,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }, 10);
         }
     });
-});
+
 
 // searchModalBg 클릭 시 동작을 하지 않도록 설정
 document.querySelector('.search-modal').addEventListener('click', function(event) {
@@ -375,21 +386,7 @@ listItems.forEach(item => {
         item.classList.add('active');
     });
 });
-// 축제검색 내용
-function addOptions(selectId, start, end) {
-    const select = document.getElementById(selectId);
-    for (let i = start; i <= end; i++) {
-        select.add(new Option(i, i));
-    }
-}
 
-// 각 선택 박스에 옵션 추가
-addOptions('startYear', 2024, 2030);
-addOptions('endYear', 2024, 2030);
-addOptions('startMonth', 1, 12);
-addOptions('endMonth', 1, 12);
-addOptions('startDay', 1, 31);
-addOptions('endDay', 1, 31);
 
 
 
@@ -628,3 +625,5 @@ document.querySelectorAll('.interest-button').forEach(button => {
 
 // 초기 로드 시 모든 축제 표시
 resetDisplay();
+
+});
