@@ -388,7 +388,13 @@ listItems.forEach(item => {
 });
 
 
-
+// 각 선택 박스에 옵션 추가
+addOptions('startYear', 2024, 2030);
+addOptions('endYear', 2024, 2030);
+addOptions('startMonth', 1, 12);
+addOptions('endMonth', 1, 12);
+addOptions('startDay', 1, 31);
+addOptions('endDay', 1, 31);
 
 const festivalSearchData = {
     "서울": {
